@@ -1,0 +1,450 @@
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\appsettings.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.staticwebassets.runtime.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.staticwebassets.endpoints.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.exe
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.deps.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.runtimeconfig.json
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\SerwerWeb.pdb
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Humanizer.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\SerwerWeb\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.AssemblyReference.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.AssemblyInfoInputs.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.AssemblyInfo.cs
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.CoreCompileInputs.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.RazorAssemblyInfo.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.RazorAssemblyInfo.cs
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\scopedcss\bundle\SerwerWeb.styles.css
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\scopedcss\projectbundle\SerwerWeb.bundle.scp.css
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\83xpfao4nt-{0}-b9sayid5wm-b9sayid5wm.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\n7itvnwzwc-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\o2o7t2ioaj-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\ke7q4my3td-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\wcorqvn9gr-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\l8alwjcil6-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\hxfox0g1ul-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\vlnnhlvnoy-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\t9heaeqj9o-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\4g2z0pa4rc-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\od21wxub82-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\eyf0w83gwi-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\j9h6ji2ugm-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\72tgmojl51-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\x9nunzsg2g-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\ciuqoaaow3-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\pfnlo2z0ho-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\onr3kzlmr5-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\yty2cdtdfm-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\cedcrqic3d-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\jnofcbcmfy-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\w5v2bwea2a-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\ukday9y9ei-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\gg7c05rnww-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\o8g1naknjq-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\iqg5i0a521-{0}-06098lyss8-06098lyss8.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\13vsrssl7w-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\8s9ufw27n8-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\9x11i8l7e8-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\sxknahdfah-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\43rsghcafh-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\qmsp1ffgxg-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\fv27zpol1a-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\jekdwt4tz9-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\7suik7ogyj-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\qfs2n9gf8m-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\ogh3h88tct-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\rt2zun69eb-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\4lc6c88o81-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\9ac4k41hai-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\ztvcubrmjl-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\axyhe7v0gv-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\3f50suiv1j-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\n7j7weyqfv-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\808frkozm5-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\shzdc5uqpf-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\rroaetfvcx-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\7b4nocqt72-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\jeql69tj40-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\v1qd9o2ac7-{0}-356vix0kms-356vix0kms.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\d76lyuh9yj-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\0a5zgy3d7w-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\rvb9q9i08x-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\6enhkhfkk7-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\djm9hb9qim-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\dlxa15kg6c-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\i2dbrhtd6f-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\yhaatipbk3-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\7a4akuz60g-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\7ponjlfxg3-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\t44ke7aiw7-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\qtm6j4qqsw-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\u3se9h08yk-{0}-97c1a8agvj-97c1a8agvj.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\compressed\i5jy9c0hnk-{0}-97c1a8agvj-97c1a8agvj.gz
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.Up2Date
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.dll
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\refint\SerwerWeb.dll
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.pdb
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\SerwerWeb.genruntimeconfig.cache
+C:\Users\User\source\SR\SerwerWeb\obj\Debug\net10.0\ref\SerwerWeb.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\appsettings.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.staticwebassets.endpoints.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.staticwebassets.runtime.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.exe
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.deps.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.runtimeconfig.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\SerwerWeb.pdb
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Humanizer.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.AssemblyReference.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.AssemblyInfoInputs.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.AssemblyInfo.cs
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.CoreCompileInputs.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.RazorAssemblyInfo.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.RazorAssemblyInfo.cs
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\scopedcss\bundle\SerwerWeb.styles.css
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\scopedcss\projectbundle\SerwerWeb.bundle.scp.css
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\83xpfao4nt-{0}-b9sayid5wm-b9sayid5wm.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\n7itvnwzwc-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\o2o7t2ioaj-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\ke7q4my3td-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\wcorqvn9gr-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\l8alwjcil6-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\hxfox0g1ul-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\vlnnhlvnoy-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\t9heaeqj9o-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\4g2z0pa4rc-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\od21wxub82-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\eyf0w83gwi-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\j9h6ji2ugm-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\72tgmojl51-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\x9nunzsg2g-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\ciuqoaaow3-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\pfnlo2z0ho-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\onr3kzlmr5-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\yty2cdtdfm-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\cedcrqic3d-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\jnofcbcmfy-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\w5v2bwea2a-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\ukday9y9ei-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\gg7c05rnww-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\o8g1naknjq-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\iqg5i0a521-{0}-06098lyss8-06098lyss8.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\13vsrssl7w-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\8s9ufw27n8-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\9x11i8l7e8-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\sxknahdfah-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\43rsghcafh-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\qmsp1ffgxg-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\fv27zpol1a-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\jekdwt4tz9-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\7suik7ogyj-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\qfs2n9gf8m-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\ogh3h88tct-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\rt2zun69eb-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\4lc6c88o81-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\9ac4k41hai-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\ztvcubrmjl-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\axyhe7v0gv-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\3f50suiv1j-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\n7j7weyqfv-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\808frkozm5-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\shzdc5uqpf-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\rroaetfvcx-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\7b4nocqt72-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\jeql69tj40-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\v1qd9o2ac7-{0}-356vix0kms-356vix0kms.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\d76lyuh9yj-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\0a5zgy3d7w-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\rvb9q9i08x-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\6enhkhfkk7-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\djm9hb9qim-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\dlxa15kg6c-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\i2dbrhtd6f-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\yhaatipbk3-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\7a4akuz60g-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\7ponjlfxg3-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\t44ke7aiw7-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\qtm6j4qqsw-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\u3se9h08yk-{0}-97c1a8agvj-97c1a8agvj.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\compressed\i5jy9c0hnk-{0}-97c1a8agvj-97c1a8agvj.gz
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.Up2Date
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\refint\SerwerWeb.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.pdb
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.genruntimeconfig.cache
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\ref\SerwerWeb.dll

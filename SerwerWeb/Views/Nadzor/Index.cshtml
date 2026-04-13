@@ -1,0 +1,113 @@
+﻿@model List<webserwer.Models.ZdarzeniePliku>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>🚀 Panel Nadzoru Studentów</h2>
+        <span class="badge bg-info text-dark">System Online</span>
+    </div>
+
+    <div class="card mb-4 border-success shadow-sm">
+        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="bi bi-folder-check"></i> Aktywnie śledzone foldery</h5>
+            <a href="@Url.Action("Konfiguracja")" class="btn btn-sm btn-light fw-bold">➕ Zarządzaj folderami</a>
+        </div>
+        <div class="card-body">
+            @if (ViewBag.Foldery != null && ((List<webserwer.Models.FolderMonitorowany>)ViewBag.Foldery).Any())
+            {
+                <div class="row">
+                    @foreach (var f in (List<webserwer.Models.FolderMonitorowany>)ViewBag.Foldery)
+                    {
+                        <div class="col-md-6 mb-2">
+                            <div class="p-3 border rounded d-flex justify-content-between align-items-center bg-light">
+                                <div>
+                                    <a href="@Url.Action("SzczegolyFolderu", new { sciezka = f.Sciezka })" class="text-decoration-none text-dark">
+                                        <span class="fs-5">📁 <strong>@f.NazwaWyswietlana</strong></span>
+                                    </a>
+                                    <br />
+                                    <small class="text-muted">Ścieżka: <code>@f.Sciezka</code></small>
+                                </div>
+                                <span class="badge bg-primary">Aktywny</span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning mb-0">Brak wybranych folderów. Kliknij przycisk powyżej, aby dodać folder do monitorowania.</div>
+            }
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="d-flex justify-content-between align-items-end mb-3">
+        <h3><i class="bi bi-clock-history"></i> Historia aktywności plików</h3>
+        <p class="text-muted small">Kliknij w nazwę pliku, aby zobaczyć przesłany kod</p>
+    </div>
+
+    <div class="table-responsive shadow-sm">
+        <table class="table table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th style="width: 20%">Student</th>
+                    <th style="width: 40%">Plik</th>
+                    <th style="width: 25%">Data otrzymania</th>
+                    <th style="width: 15%">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var z in Model)
+                {
+                    <tr class="@(z.CzyToKopia ? "table-danger" : "")">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle bg-secondary text-white d-flex justify-content-center align-items-center me-2" style="width: 30px; height: 30px; font-size: 0.8rem;">
+                                    @z.NazwaStudenta.Substring(0, 1).ToUpper()
+                                </div>
+                                <strong>@z.NazwaStudenta</strong>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Szczegoly", new { id = z.Id })" class="text-decoration-none fw-bold d-block">
+                                📄 @z.NazwaPliku
+                            </a>
+                            @if(z.CzyToKopia) {
+                                <small class="text-danger fw-bold"><i class="bi bi-exclamation-triangle"></i> Wykryto duplikat!</small>
+                            }
+                        </td>
+                        <td class="text-muted">
+                            @z.DataLogowania.ToString("dd.MM.yyyy") <span class="badge bg-light text-dark border">@z.DataLogowania.ToString("HH:mm:ss")</span>
+                        </td>
+                        <td>
+                            @if (z.CzyToKopia)
+                            {
+                                <span class="badge bg-danger p-2 w-100">KOPIA</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-success p-2 w-100">OK</span>
+                            }
+                        </td>
+                    </tr>
+                }
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="4" class="text-center p-5 text-muted">
+                            <em>Brak zarejestrowanych plików. Uruchom Agenta na komputerze studenta.</em>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .table-hover tbody tr:hover {
+        background-color: rgba(0,0,0,.03);
+        transition: 0.2s;
+    }
+    .text-pink { color: #d63384; }
+</style>

@@ -1,0 +1,28 @@
+C:\Users\User\source\SR\Student\bin\Debug\net10.0\Student.exe
+C:\Users\User\source\SR\Student\bin\Debug\net10.0\Student.deps.json
+C:\Users\User\source\SR\Student\bin\Debug\net10.0\Student.runtimeconfig.json
+C:\Users\User\source\SR\Student\bin\Debug\net10.0\Student.dll
+C:\Users\User\source\SR\Student\bin\Debug\net10.0\Student.pdb
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.AssemblyInfoInputs.cache
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.AssemblyInfo.cs
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.csproj.CoreCompileInputs.cache
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.dll
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\refint\Student.dll
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.pdb
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\Student.genruntimeconfig.cache
+C:\Users\User\source\SR\Student\obj\Debug\net10.0\ref\Student.dll
+C:\Users\User\source\SR\Nowy folder\Student\bin\Debug\net10.0\Student.exe
+C:\Users\User\source\SR\Nowy folder\Student\bin\Debug\net10.0\Student.deps.json
+C:\Users\User\source\SR\Nowy folder\Student\bin\Debug\net10.0\Student.runtimeconfig.json
+C:\Users\User\source\SR\Nowy folder\Student\bin\Debug\net10.0\Student.dll
+C:\Users\User\source\SR\Nowy folder\Student\bin\Debug\net10.0\Student.pdb
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.AssemblyInfoInputs.cache
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.AssemblyInfo.cs
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.csproj.CoreCompileInputs.cache
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.dll
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\refint\Student.dll
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.pdb
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\Student.genruntimeconfig.cache
+C:\Users\User\source\SR\Nowy folder\Student\obj\Debug\net10.0\ref\Student.dll

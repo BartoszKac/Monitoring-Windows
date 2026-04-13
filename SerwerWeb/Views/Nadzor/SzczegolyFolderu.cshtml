@@ -1,0 +1,62 @@
+﻿@model List<webserwer.Models.ZdarzeniePliku>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>📂 Zawartość folderu: @ViewBag.NazwaFolderu</h2>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Powrót</a>
+    </div>
+
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">📄 Pliki fizycznie znajdujące się w folderze</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Nazwa pliku</th>
+                        <th>Ostatnia modyfikacja na dysku</th>
+                        <th>Rozmiar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var plik in ViewBag.PlikiNaDysku)
+                    {
+                        <tr>
+                            <td><strong>@plik.Nazwa</strong></td>
+                            <td>@plik.DataModyfikacji</td>
+                            <td>@plik.Rozmiar</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr />
+
+    <h4>🕒 Historia zmian zarejestrowana przez system:</h4>
+    <table class="table table-hover border">
+        <thead class="table-light">
+            <tr>
+                <th>Student</th>
+                <th>Plik w bazie</th>
+                <th>Data wysłania</th>
+                <th>Akcja</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.NazwaStudenta</td>
+                    <td>@p.NazwaPliku</td>
+                    <td>@p.DataLogowania</td>
+                    <td>
+                        <a href="@Url.Action("Szczegoly", new { id = p.Id })" class="btn btn-sm btn-info text-white">Podgląd kodu</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
