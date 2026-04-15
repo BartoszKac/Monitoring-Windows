@@ -13,6 +13,54 @@ public class NadzorController : Controller
         _context = context;
     }
 
+    public async Task<IActionResult> OstatnieAktywnosci(int strona = 1, string szukaj = "", string status = "", DateTime? dataOd = null, DateTime? dataDo = null)
+    {
+        int wielkoscStrony = 50;
+        int pomin = (strona - 1) * wielkoscStrony;
+
+        var query = _context.Zdarzenia.AsQueryable();
+
+        // Filtrowanie po tekście
+        if (!string.IsNullOrEmpty(szukaj))
+        {
+            query = query.Where(z => z.NazwaStudenta.Contains(szukaj) || z.NazwaPliku.Contains(szukaj));
+        }
+
+        // Filtrowanie po statusie
+        if (status == "kopia") query = query.Where(z => z.CzyToKopia == true);
+        else if (status == "ok") query = query.Where(z => z.CzyToKopia == false);
+
+        // NOWE: Filtrowanie po dacie
+        if (dataOd.HasValue)
+        {
+            query = query.Where(z => z.DataLogowania >= dataOd.Value);
+        }
+        if (dataDo.HasValue)
+        {
+            // Dodajemy 1 dzień lub ustawiamy czas na 23:59:59, żeby objąć cały wybrany dzień "do"
+            var koniecDnia = dataDo.Value.Date.AddDays(1).AddTicks(-1);
+            query = query.Where(z => z.DataLogowania <= koniecDnia);
+        }
+
+        int wszystkichZgodnych = await query.CountAsync();
+
+        var lista = await query
+            .OrderByDescending(z => z.DataLogowania)
+            .Skip(pomin)
+            .Take(wielkoscStrony)
+            .ToListAsync();
+
+        // Przekazujemy wszystko do widoku
+        ViewBag.Strona = strona;
+        ViewBag.MaNastepna = (pomin + wielkoscStrony) < wszystkichZgodnych;
+        ViewBag.Szukaj = szukaj;
+        ViewBag.Status = status;
+        ViewBag.DataOd = dataOd?.ToString("yyyy-MM-dd"); // Format dla inputa typu date
+        ViewBag.DataDo = dataDo?.ToString("yyyy-MM-dd");
+
+        return View(lista);
+    }
+
     public async Task<IActionResult> Index()
     {
         // Pobieramy historię logowań (to już masz)
@@ -117,9 +165,22 @@ public class NadzorController : Controller
 
     public async Task<IActionResult> Szczegoly(int id)
     {
+        // 1. Pobieramy szczegóły klikniętego pliku
         var zdarzenie = await _context.Zdarzenia.FirstOrDefaultAsync(z => z.Id == id);
 
         if (zdarzenie == null) return NotFound();
+
+        // 2. Jeśli to kopia, szukamy oryginału
+        if (zdarzenie.CzyToKopia)
+        {
+            var oryginal = await _context.Zdarzenia
+                .Where(z => z.Hash == zdarzenie.Hash && z.Id != zdarzenie.Id)
+                .OrderBy(z => z.DataLogowania) // Najstarszy wpis to oryginał
+                .FirstOrDefaultAsync();
+
+            ViewBag.OryginalnyAutor = oryginal?.NazwaStudenta ?? "Nieznany (oryginał mógł zostać usunięty)";
+            ViewBag.DataOryginallu = oryginal?.DataLogowania;
+        }
 
         return View(zdarzenie);
     }

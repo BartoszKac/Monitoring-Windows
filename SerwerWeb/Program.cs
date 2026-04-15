@@ -28,6 +28,6 @@ app.UseAuthorization();
 // 4. Mapowanie tras
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Nadzor}/{action=Index}/{id?}");
 
 app.Run();

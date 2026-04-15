@@ -448,3 +448,4 @@ C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\refint\SerwerWeb
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.pdb
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.genruntimeconfig.cache
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\ref\SerwerWeb.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.sourcelink.json

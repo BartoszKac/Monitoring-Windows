@@ -1,0 +1,103 @@
+﻿@model List<webserwer.Models.ZdarzeniePliku>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>🌐 Globalny Podgląd Aktywności</h2>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+    </div>
+
+    <div class="card shadow-sm mb-4 bg-light">
+        <div class="card-body">
+            <form method="get" action="@Url.Action("OstatnieAktywnosci")" class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label small fw-bold">Szukaj (Student/Plik)</label>
+                    <input type="text" name="szukaj" value="@ViewBag.Szukaj" class="form-control" placeholder="Np. Kowalski...">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label small fw-bold">Status</label>
+                    <select name="status" class="form-select">
+                        <option value="">Wszystkie</option>
+                        <option value="kopia" selected="@(ViewBag.Status == "kopia")">Tylko PLAGIATY</option>
+                        <option value="ok" selected="@(ViewBag.Status == "ok")">Tylko OK</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label small fw-bold">Data od</label>
+                    <input type="date" name="dataOd" value="@ViewBag.DataOd" class="form-control">
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label small fw-bold">Data do</label>
+                    <input type="date" name="dataDo" value="@ViewBag.DataDo" class="form-control">
+                </div>
+
+                <div class="col-md-2 d-flex align-items-end gap-2">
+                    <button type="submit" class="btn btn-primary w-100">Filtruj</button>
+                    <a href="@Url.Action("OstatnieAktywnosci")" class="btn btn-outline-danger">❌</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0 align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Data i Godzina</th>
+                        <th>Student</th>
+                        <th>Plik</th>
+                        <th>Status</th>
+                        <th>Akcja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var z in Model)
+                    {
+                        <tr class="@(z.CzyToKopia ? "table-danger" : "")">
+                            <td>
+                                <span class="fw-bold">@z.DataLogowania.ToString("dd.MM")</span>
+                                <span class="text-muted">@z.DataLogowania.ToString("HH:mm:ss")</span>
+                            </td>
+                            <td><strong>@z.NazwaStudenta</strong></td>
+                            <td><code>@z.NazwaPliku</code></td>
+                            <td>
+                                @if (z.CzyToKopia)
+                                {
+                                    <span class="badge bg-danger">KOPIA</span>
+                                }
+                                else
+                                {
+
+                                    <span class="badge bg-success">OK</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Szczegoly", new { id = z.Id })" class="btn btn-sm btn-dark">👁</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <span class="badge bg-secondary">Strona @ViewBag.Strona</span>
+        <div class="d-flex gap-2">
+            @if (ViewBag.Strona > 1)
+            {
+                <a href="@Url.Action("OstatnieAktywnosci", new { strona = ViewBag.Strona - 1, szukaj = ViewBag.Szukaj, status = ViewBag.Status, dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
+                   class="btn btn-dark">Poprzednie</a>
+            }
+
+            @if (ViewBag.MaNastepna)
+            {
+                <a href="@Url.Action("OstatnieAktywnosci", new { strona = ViewBag.Strona + 1, szukaj = ViewBag.Szukaj, status = ViewBag.Status, dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
+                   class="btn btn-dark">Następne</a>
+            }
+        </div>
+    </div>
+</div>

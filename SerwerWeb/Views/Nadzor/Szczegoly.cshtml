@@ -1,19 +1,64 @@
 ﻿@model webserwer.Models.ZdarzeniePliku
 
 <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center">
-        <h2>Podgląd pliku: @Model.NazwaPliku</h2>
-        <a href="@Url.Action("Index")" class="btn btn-secondary">Powrót do listy</a>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="bi bi-file-earmark-code"></i> Szczegóły przesłanego pliku</h2>
+        <button onclick="history.back()" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Powrót
+        </button>
     </div>
 
-    <div class="card mt-3">
-        <div class="card-header bg-dark text-white">
-            <strong>Student:</strong> @Model.NazwaStudenta |
-            <strong>Data:</strong> @Model.DataLogowania.ToString("dd.MM.yyyy HH:mm:ss") |
-            <strong>Status:</strong> @(Model.CzyToKopia ? "KOPIA/PLAGIAT" : "OK")
+    @if (Model.CzyToKopia)
+    {
+        <div class="card border-danger mb-4 shadow">
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0"><i class="bi bi-exclamation-octagon"></i> WYKRYTO KOPIĘ (PLAGIAT)</h4>
+            </div>
+            <div class="card-body bg-light">
+                <p class="fs-5">
+                    Ten plik jest identyczny z plikiem przesłanym wcześniej przez:
+                </p>
+                <div class="d-flex align-items-center p-3 bg-white border border-danger rounded">
+                    <div class="display-6 me-3">👤</div>
+                    <div>
+                        <h3 class="text-danger mb-0">@ViewBag.OryginalnyAutor</h3>
+                        <p class="text-muted mb-0">Data oryginału: @(ViewBag.DataOryginallu?.ToString("dd.MM.yyyy HH:mm:ss") ?? "Brak danych")</p>
+                    </div>
+                </div>
+                <div class="mt-3 small text-muted">
+                    * System porównał sumy kontrolne (Hash SHA256) obu plików i są one w 100% zgodne.
+                </div>
+            </div>
         </div>
-        <div class="card-body bg-light">
-            <pre style="background-color: #f8f9fa; padding: 15px; border: 1px solid #ddd; border-radius: 5px; overflow-x: auto;"><code>@Model.Tresc</code></pre>
+    }
+    else
+    {
+        <div class="alert alert-success d-flex align-items-center shadow-sm">
+            <i class="bi bi-check-circle-fill fs-3 me-3"></i>
+            <div>
+                <strong>Plik unikalny:</strong> Nie znaleziono identycznej zawartości u innych studentów.
+            </div>
+        </div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white d-flex justify-content-between">
+            <span>Student: <strong>@Model.NazwaStudenta</strong></span>
+            <span>Plik: <code>@Model.NazwaPliku</code></span>
+        </div>
+        <div class="card-body p-0">
+            <pre class="m-0 p-4 bg-light text-dark" style="max-height: 500px; overflow-y: auto; font-family: 'Consolas', monospace; font-size: 0.9rem; line-height: 1.5;">@Model.Tresc</pre>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center bg-white">
+            <span class="text-muted small">Wysłano: @Model.DataLogowania.ToString("dd.MM.yyyy HH:mm:ss")</span>
+            <span class="badge bg-secondary">Hash: @Model.Hash.Substring(0, 10)...</span>
         </div>
     </div>
 </div>
+
+<style>
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
