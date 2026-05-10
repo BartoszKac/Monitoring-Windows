@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  pc-01:
+    build: .
+    container_name: agent-kaczmarczyk
+    restart: unless-stopped  # <--- TO ROBI Z KONTENERA "USŁUGĘ"
+    environment:
+      - AGENT_PC_NAME=LAB01-PC01
+      - AGENT_STUDENT_NAME=Bartosz Kaczmarczyk
+      - SERVER_URL=http://host.docker.internal:5271
+    volumes:
+      - /c/MonitoringTests/PC01:/data
+
+  pc-02:
+    build: .
+    container_name: agent-nowak
+    restart: unless-stopped
+    environment:
+      - AGENT_PC_NAME=LAB01-PC02
+      - AGENT_STUDENT_NAME=Anna Nowak
+      - SERVER_URL=http://host.docker.internal:5271
+    volumes:
+      - /c/MonitoringTests/PC02:/data
+
+  pc-03:
+    build: .
+    container_name: agent-kowalski
+    restart: unless-stopped
+    environment:
+      - AGENT_PC_NAME=LAB01-PC03
+      - AGENT_STUDENT_NAME=Jan Kowalski
+      - SERVER_URL=http://host.docker.internal:5271
+    volumes:
+      - /c/MonitoringTests/PC03:/data
+
+  pc-04:
+    build: .
+    container_name: agent-wisniewski
+    restart: unless-stopped
+    environment:
+      - AGENT_PC_NAME=LAB01-PC04
+      - AGENT_STUDENT_NAME=Piotr Wisniewski
+      - SERVER_URL=http://host.docker.internal:5271
+    volumes:
+      - /c/MonitoringTests/PC04:/data

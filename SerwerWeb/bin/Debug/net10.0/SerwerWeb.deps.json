@@ -9,7 +9,8 @@
       "SerwerWeb/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.5",
-          "Microsoft.EntityFrameworkCore.Tools": "10.0.5"
+          "Microsoft.EntityFrameworkCore.Tools": "10.0.5",
+          "Microsoft.Extensions.Hosting.WindowsServices": "10.0.7"
         },
         "runtime": {
           "SerwerWeb.dll": {}
@@ -511,6 +512,17 @@
           }
         }
       },
+      "Microsoft.Extensions.Hosting.WindowsServices/10.0.7": {
+        "dependencies": {
+          "System.ServiceProcess.ServiceController": "10.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Hosting.WindowsServices.dll": {
+            "assemblyVersion": "10.0.0.7",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
+      },
       "Microsoft.Identity.Client/4.73.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "7.7.1"
@@ -750,6 +762,22 @@
             "fileVersion": "9.0.425.16305"
           }
         }
+      },
+      "System.ServiceProcess.ServiceController/10.0.7": {
+        "runtime": {
+          "lib/net10.0/System.ServiceProcess.ServiceController.dll": {
+            "assemblyVersion": "10.0.0.7",
+            "fileVersion": "10.0.726.21808"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.ServiceProcess.ServiceController.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.7",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
       }
     }
   },
@@ -898,6 +926,13 @@
       "sha512": "sha512-xA4kkL+QS6KCAOKz/O0oquHs44Ob8J7zpBCNt3wjkBWDg5aCqfwG8rWWLsg5V86AM0sB849g9JjPjIdksTCIKg==",
       "path": "microsoft.extensions.dependencymodel/10.0.5",
       "hashPath": "microsoft.extensions.dependencymodel.10.0.5.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Hosting.WindowsServices/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/qRA+VApG26QadEx1XfHwbqTs0LG0//GEBS30I2RMVJU6f60zKWMTg4l9wziPqr/bU1qvQVgVNFj2mZO4Gigtw==",
+      "path": "microsoft.extensions.hosting.windowsservices/10.0.7",
+      "hashPath": "microsoft.extensions.hosting.windowsservices.10.0.7.nupkg.sha512"
     },
     "Microsoft.Identity.Client/4.73.1": {
       "type": "package",
@@ -1066,6 +1101,13 @@
       "sha512": "sha512-o94k2RKuAce3GeDMlUvIXlhVa1kWpJw95E6C9LwW0KlG0nj5+SgCiIxJ2Eroqb9sLtG1mEMbFttZIBZ13EJPvQ==",
       "path": "system.security.cryptography.protecteddata/9.0.4",
       "hashPath": "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
+    },
+    "System.ServiceProcess.ServiceController/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c8TTpzLzKjXZv4iDM4JErbg9rHcmIvZnW376W9qy3vlyO86rLX1XKEmyLxEBDUDrUtdcdThtqlnenxoYdH35hA==",
+      "path": "system.serviceprocess.servicecontroller/10.0.7",
+      "hashPath": "system.serviceprocess.servicecontroller.10.0.7.nupkg.sha512"
     }
   }
 }

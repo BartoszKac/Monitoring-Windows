@@ -1,4 +1,7 @@
-﻿@model List<webserwer.Models.ZdarzeniePliku>
+﻿@* =============================================
+   PLIK: Views/Nadzor/OstatnieAktywnosci.cshtml  (ZASTĄP)
+   ============================================= *@
+@model List<webserwer.Models.ZdarzeniePliku>
 
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -8,18 +11,41 @@
 
     <div class="card shadow-sm mb-4 bg-light">
         <div class="card-body">
-            <form method="get" action="@Url.Action("OstatnieAktywnosci")" class="row g-3">
+            <form method="get" action="@Url.Action("OstatnieAktywnosci")" class="row g-2 align-items-end">
+
                 <div class="col-md-3">
                     <label class="form-label small fw-bold">Szukaj (Student/Plik)</label>
                     <input type="text" name="szukaj" value="@ViewBag.Szukaj" class="form-control" placeholder="Np. Kowalski...">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-2">
+                    <label class="form-label small fw-bold">Komputer</label>
+                    <select name="komputer" class="form-select">
+                        <option value="">Wszystkie</option>
+                        @foreach (var k in (List<string>)ViewBag.WszystkieKomputery)
+                        {
+                            <option value="@k" selected="@(ViewBag.Komputer == k)">@k</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label small fw-bold">Student</label>
+                    <select name="student" class="form-select">
+                        <option value="">Wszyscy</option>
+                        @foreach (var s in (List<string>)ViewBag.WszyscyStudenci)
+                        {
+                            <option value="@s" selected="@(ViewBag.Student == s)">@s</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-1">
                     <label class="form-label small fw-bold">Status</label>
                     <select name="status" class="form-select">
                         <option value="">Wszystkie</option>
-                        <option value="kopia" selected="@(ViewBag.Status == "kopia")">Tylko PLAGIATY</option>
-                        <option value="ok" selected="@(ViewBag.Status == "ok")">Tylko OK</option>
+                        <option value="kopia" selected="@(ViewBag.Status == "kopia")">Plagiaty</option>
+                        <option value="ok" selected="@(ViewBag.Status == "ok")">OK</option>
                     </select>
                 </div>
 
@@ -33,10 +59,11 @@
                     <input type="date" name="dataDo" value="@ViewBag.DataDo" class="form-control">
                 </div>
 
-                <div class="col-md-2 d-flex align-items-end gap-2">
-                    <button type="submit" class="btn btn-primary w-100">Filtruj</button>
-                    <a href="@Url.Action("OstatnieAktywnosci")" class="btn btn-outline-danger">❌</a>
+                <div class="col-auto d-flex gap-1">
+                    <button type="submit" class="btn btn-primary">🔍 Filtruj</button>
+                    <a href="@Url.Action("OstatnieAktywnosci")" class="btn btn-outline-danger">✕</a>
                 </div>
+
             </form>
         </div>
     </div>
@@ -47,37 +74,42 @@
                 <thead class="table-dark">
                     <tr>
                         <th>Data i Godzina</th>
+                        <th>Komputer</th>
                         <th>Student</th>
                         <th>Plik</th>
                         <th>Status</th>
-                        <th>Akcja</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var z in Model)
                     {
                         <tr class="@(z.CzyToKopia ? "table-danger" : "")">
-                            <td>
-                                <span class="fw-bold">@z.DataLogowania.ToString("dd.MM")</span>
-                                <span class="text-muted">@z.DataLogowania.ToString("HH:mm:ss")</span>
+                            <td class="small">
+                                <strong>@z.DataLogowania.ToString("dd.MM")</strong>
+                                <span class="text-muted ms-1">@z.DataLogowania.ToString("HH:mm:ss")</span>
                             </td>
-                            <td><strong>@z.NazwaStudenta</strong></td>
+                            <td>
+                                <a href="@Url.Action("OstatnieAktywnosci", new { komputer = z.NazwaKomputera })"
+                                   class="badge bg-dark text-decoration-none">🖥 @z.NazwaKomputera</a>
+                            </td>
+                            <td>
+                                <a href="@Url.Action("OstatnieAktywnosci", new { student = z.NazwaStudenta })"
+                                   class="text-decoration-none text-dark fw-bold">@z.NazwaStudenta</a>
+                            </td>
                             <td><code>@z.NazwaPliku</code></td>
                             <td>
-                                @if (z.CzyToKopia)
-                                {
-                                    <span class="badge bg-danger">KOPIA</span>
-                                }
-                                else
-                                {
-
-                                    <span class="badge bg-success">OK</span>
-                                }
+                                @if (z.CzyToKopia) { <span class="badge bg-danger">KOPIA</span> }
+                                else { <span class="badge bg-success">OK</span> }
                             </td>
                             <td>
                                 <a href="@Url.Action("Szczegoly", new { id = z.Id })" class="btn btn-sm btn-dark">👁</a>
                             </td>
                         </tr>
+                    }
+                    @if (!Model.Any())
+                    {
+                        <tr><td colspan="6" class="text-center p-4 text-muted">Brak wyników.</td></tr>
                     }
                 </tbody>
             </table>
@@ -89,13 +121,20 @@
         <div class="d-flex gap-2">
             @if (ViewBag.Strona > 1)
             {
-                <a href="@Url.Action("OstatnieAktywnosci", new { strona = ViewBag.Strona - 1, szukaj = ViewBag.Szukaj, status = ViewBag.Status, dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
+                <a href="@Url.Action("OstatnieAktywnosci", new {
+                       strona = ViewBag.Strona - 1, szukaj = ViewBag.Szukaj,
+                       status = ViewBag.Status, student = ViewBag.Student,
+                       komputer = ViewBag.Komputer,
+                       dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
                    class="btn btn-dark">Poprzednie</a>
             }
-
             @if (ViewBag.MaNastepna)
             {
-                <a href="@Url.Action("OstatnieAktywnosci", new { strona = ViewBag.Strona + 1, szukaj = ViewBag.Szukaj, status = ViewBag.Status, dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
+                <a href="@Url.Action("OstatnieAktywnosci", new {
+                       strona = ViewBag.Strona + 1, szukaj = ViewBag.Szukaj,
+                       status = ViewBag.Status, student = ViewBag.Student,
+                       komputer = ViewBag.Komputer,
+                       dataOd = ViewBag.DataOd, dataDo = ViewBag.DataDo })"
                    class="btn btn-dark">Następne</a>
             }
         </div>

@@ -5,10 +5,6 @@
       {
         "Path": "SerwerWeb.csproj",
         "Action": "Start"
-      },
-      {
-        "Path": "..\\Student\\Student.csproj",
-        "Action": "Start"
       }
     ]
   }

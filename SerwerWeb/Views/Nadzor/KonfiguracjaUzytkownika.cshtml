@@ -1,0 +1,110 @@
+﻿@* =============================================
+   NOWY PLIK: Views/Nadzor/KonfiguracjaUzytkownika.cshtml
+   ============================================= *@
+@model List<webserwer.Models.FolderUzytkownika>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>👤 Konfiguracja Folderów per Użytkownik</h2>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+    </div>
+
+    <div class="alert alert-info">
+        <strong>ℹ️ Jak to działa?</strong> Jeśli student ma przypisane własne foldery, agent pobierze tylko je (zamiast folderów globalnych).
+        Jeśli student nie ma własnych folderów – dostanie listę globalną.
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Wybierz studenta</h5>
+                </div>
+                <div class="card-body">
+                    <form method="get" action="@Url.Action("KonfiguracjaUzytkownika")">
+                        <select name="nazwaStudenta" class="form-select mb-3" onchange="this.form.submit()">
+                            <option value="">-- wybierz studenta --</option>
+                            @foreach (var s in (List<string>)ViewBag.WszyscyStudenci)
+                            {
+                                <option value="@s" selected="@(ViewBag.WybranyStudent == s)">@s</option>
+                            }
+                        </select>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(ViewBag.WybranyStudent as string))
+                    {
+                        <hr />
+                        <p class="fw-bold">Dodaj folder dla: <span class="text-primary">@ViewBag.WybranyStudent</span></p>
+                        <form asp-action="DodajFolderUzytkownika" method="post">
+                            <input type="hidden" name="nazwaStudenta" value="@ViewBag.WybranyStudent" />
+                            <div class="mb-2">
+                                <input type="text" name="sciezka" class="form-control"
+                                       placeholder="Np. C:\Zadania\Student1" required />
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">➕ Dodaj folder</button>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            @if (!string.IsNullOrEmpty(ViewBag.WybranyStudent as string))
+            {
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Foldery przypisane do: @ViewBag.WybranyStudent</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        @if (Model.Any())
+                        {
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Folder</th>
+                                        <th>Ścieżka</th>
+                                        <th>Dodano</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var f in Model)
+                                    {
+                                        <tr>
+                                            <td>📁 <strong>@f.NazwaWyswietlana</strong></td>
+                                            <td><code class="small">@f.Sciezka</code></td>
+                                            <td><small class="text-muted">@f.DataDodania.ToString("dd.MM.yyyy")</small></td>
+                                            <td>
+                                                <form asp-action="UsunFolderUzytkownika" method="post"
+                                                      onsubmit="return confirm('Usunąć ten folder?')">
+                                                    <input type="hidden" name="id" value="@f.Id" />
+                                                    <input type="hidden" name="nazwaStudenta" value="@ViewBag.WybranyStudent" />
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">🗑</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <div class="text-center p-5 text-muted">
+                                <em>
+                                    Brak folderów przypisanych do tego studenta.<br>
+                                    Agent będzie używać listy folderów globalnych.
+                                </em>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-secondary h-100 d-flex align-items-center justify-content-center">
+                    <span class="text-muted">Wybierz studenta z listy po lewej.</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -22,6 +22,59 @@ namespace SerwerWeb.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("webserwer.Models.CzarnaLista", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DataDodania")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NazwaStudenta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Powod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CzarnaLista");
+                });
+
+            modelBuilder.Entity("webserwer.Models.FolderKomputera", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DataDodania")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("KomputerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NazwaWyswietlana")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sciezka")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("KomputerId");
+
+                    b.ToTable("FolderyKomputerow");
+                });
+
             modelBuilder.Entity("webserwer.Models.FolderMonitorowany", b =>
                 {
                     b.Property<int>("Id")
@@ -43,6 +96,43 @@ namespace SerwerWeb.Migrations
                     b.ToTable("FolderyMonitorowane");
                 });
 
+            modelBuilder.Entity("webserwer.Models.Komputer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConnectionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DataDodania")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NazwaKomputera")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NazwaStudenta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Online")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Opis")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OstatnioWidziany")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Komputery");
+                });
+
             modelBuilder.Entity("webserwer.Models.ZdarzeniePliku", b =>
                 {
                     b.Property<int>("Id")
@@ -61,6 +151,10 @@ namespace SerwerWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NazwaKomputera")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("NazwaPliku")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -76,6 +170,22 @@ namespace SerwerWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Zdarzenia");
+                });
+
+            modelBuilder.Entity("webserwer.Models.FolderKomputera", b =>
+                {
+                    b.HasOne("webserwer.Models.Komputer", "Komputer")
+                        .WithMany("Foldery")
+                        .HasForeignKey("KomputerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Komputer");
+                });
+
+            modelBuilder.Entity("webserwer.Models.Komputer", b =>
+                {
+                    b.Navigation("Foldery");
                 });
 #pragma warning restore 612, 618
         }

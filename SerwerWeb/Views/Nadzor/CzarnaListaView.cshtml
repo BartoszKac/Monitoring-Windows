@@ -1,0 +1,95 @@
+﻿@* =============================================
+   NOWY PLIK: Views/Nadzor/CzarnaListaView.cshtml
+   ============================================= *@
+@model List<webserwer.Models.CzarnaLista>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>🚫 Czarna Lista Studentów</h2>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card shadow-sm mb-4 border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0">➕ Dodaj studenta na czarną listę</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="DodajDoCzarnejListy" method="post">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Student</label>
+                            @if (ViewBag.DostepniStudenci != null && ((List<string>)ViewBag.DostepniStudenci).Any())
+                            {
+                                <select name="nazwaStudenta" class="form-select" required>
+                                    <option value="">-- wybierz studenta --</option>
+                                    @foreach (var s in (List<string>)ViewBag.DostepniStudenci)
+                                    {
+                                        <option value="@s">@s</option>
+                                    }
+                                </select>
+                                <small class="text-muted">Lista zawiera studentów, którzy wysyłali pliki i nie są jeszcze zablokowany.</small>
+                            }
+                            else
+                            {
+                                <input type="text" name="nazwaStudenta" class="form-control" placeholder="Wpisz nazwę studenta..." required />
+                                <small class="text-muted">Wpisz ręcznie – brak nowych studentów do dodania.</small>
+                            }
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Powód (opcjonalnie)</label>
+                            <input type="text" name="powod" class="form-control" placeholder="Np. plagiat, oszustwo...">
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">🚫 Zablokuj studenta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Lista zablokowanych (@Model.Count)</h5>
+                </div>
+                <div class="card-body p-0">
+                    @if (Model.Any())
+                    {
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Powód</th>
+                                    <th>Data</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var wpis in Model)
+                                {
+                                    <tr>
+                                        <td><strong class="text-danger">@wpis.NazwaStudenta</strong></td>
+                                        <td><small>@(string.IsNullOrEmpty(wpis.Powod) ? "—" : wpis.Powod)</small></td>
+                                        <td><small class="text-muted">@wpis.DataDodania.ToString("dd.MM.yyyy")</small></td>
+                                        <td>
+                                            <form asp-action="UsunZCzarnejListy" method="post"
+                                                  onsubmit="return confirm('Odblokować @wpis.NazwaStudenta?')">
+                                                <input type="hidden" name="id" value="@wpis.Id" />
+                                                <button type="submit" class="btn btn-sm btn-outline-success" title="Odblokuj">✅ Odblokuj</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <div class="text-center p-5 text-muted">
+                            <em>Czarna lista jest pusta.</em>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

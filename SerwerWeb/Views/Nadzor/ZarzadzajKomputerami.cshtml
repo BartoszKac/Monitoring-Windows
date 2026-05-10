@@ -1,0 +1,117 @@
+﻿@* =============================================
+   NOWY PLIK: Views/Nadzor/ZarzadzajKomputerami.cshtml
+   ============================================= *@
+@model List<webserwer.Models.Komputer>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>🖥 Zarządzanie Komputerami</h2>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+    </div>
+
+    <div class="alert alert-info">
+        Każdy komputer ma własną listę folderów do monitorowania. Agent pobiera foldery używając
+        <code>/api/nadzor/konfiguracja?komputer=NAZWA</code>. Jeśli komputer nie ma własnych folderów –
+        dostaje listę globalną.
+    </div>
+
+    <div class="row mb-4">
+        {{!-- FORMULARZ DODAWANIA KOMPUTERA --}}
+        <div class="col-md-4">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">➕ Dodaj komputer</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="DodajKomputer" method="post">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Nazwa komputera *</label>
+                            <input type="text" name="nazwaKomputera" class="form-control"
+                                   placeholder="Np. LAB01-PC03" required />
+                            <small class="text-muted">Musi być identyczna jak w agencie.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Opis (sala, lokalizacja)</label>
+                            <input type="text" name="opis" class="form-control" placeholder="Np. Sala 204, rząd 2">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Dodaj komputer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {{!-- LISTA KOMPUTERÓW --}}
+        <div class="col-md-8">
+            @if (!Model.Any())
+            {
+                <div class="alert alert-warning">Brak skonfigurowanych komputerów.</div>
+            }
+            else
+            {
+                @foreach (var k in Model)
+                {
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                            <span>
+                                🖥 <strong>@k.NazwaKomputera</strong>
+                                @if (!string.IsNullOrEmpty(k.Opis))
+                                {
+                                    <small class="text-secondary ms-2">@k.Opis</small>
+                                }
+                            </span>
+                            <form asp-action="UsunKomputer" method="post"
+                                  onsubmit="return confirm('Usunąć komputer @k.NazwaKomputera i wszystkie jego foldery?')">
+                                <input type="hidden" name="id" value="@k.Id" />
+                                <button class="btn btn-sm btn-outline-danger">🗑 Usuń komputer</button>
+                            </form>
+                        </div>
+                        <div class="card-body">
+                            {{!-- Dodaj folder do komputera --}}
+                            <form asp-action="DodajFolderKomputera" method="post" class="row g-2 mb-3">
+                                <input type="hidden" name="komputerId" value="@k.Id" />
+                                <div class="col">
+                                    <input type="text" name="sciezka" class="form-control form-control-sm"
+                                           placeholder="Np. C:\Zadania\Grupa1" required />
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-sm btn-success">➕ Dodaj folder</button>
+                                </div>
+                            </form>
+
+                            {{!-- Lista folderów --}}
+                            @if (k.Foldery.Any())
+                            {
+                                <div class="list-group list-group-flush">
+                                    @foreach (var f in k.Foldery)
+                                    {
+                                        <div class="list-group-item d-flex justify-content-between align-items-center py-1">
+                                            <span>
+                                                📁 <strong>@f.NazwaWyswietlana</strong>
+                                                <small class="text-muted ms-2"><code>@f.Sciezka</code></small>
+                                            </span>
+                                            <form asp-action="UsunFolderKomputera" method="post"
+                                                  onsubmit="return confirm('Usunąć folder?')">
+                                                <input type="hidden" name="id" value="@f.Id" />
+                                                <button class="btn btn-sm btn-outline-danger py-0">🗑</button>
+                                            </form>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <small class="text-muted">Brak folderów – używane są foldery globalne.</small>
+                            }
+                        </div>
+                        <div class="card-footer text-muted small">
+                            Dodano: @k.DataDodania.ToString("dd.MM.yyyy") &nbsp;|&nbsp;
+                            <a href="@Url.Action("OstatnieAktywnosci", new { komputer = k.NazwaKomputera })">
+                                Zobacz logi tego komputera →
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

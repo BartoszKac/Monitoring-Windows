@@ -1,33 +1,34 @@
 using Microsoft.EntityFrameworkCore;
+using SerwerWeb.Controllers;
+using webserwer.Controllers; // To musi pasować do namespace z kroku wyżej
 using webserwer.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Rejestracja bazy danych SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MonitoringStudentow;Trusted_Connection=True;MultipleActiveResultSets=true"));
 
-// 2. Dodanie obsługi MVC
 builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR(); // --- DODAJ TO TUTAJ ---
 
 var app = builder.Build();
 
-// 3. Konfiguracja potoku HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 app.UseAuthorization();
 
-// 4. Mapowanie tras
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Nadzor}/{action=Index}/{id?}");
+
+
+app.MapHub<NadzorHub>("/nadzorHub");
 
 app.Run();

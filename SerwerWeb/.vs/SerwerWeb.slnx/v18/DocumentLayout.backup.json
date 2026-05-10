@@ -3,54 +3,105 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\szczegoly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\szczegoly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\controllers\\nadzorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:controllers\\nadzorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\ostatnieaktywnosci.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\ostatnieaktywnosci.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6BBDD6C4-69E2-1D48-7C08-0921CE1C3F08}|..\\Student\\Student.csproj|c:\\users\\user\\source\\sr\\nowy folder\\student\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BBDD6C4-69E2-1D48-7C08-0921CE1C3F08}|..\\Student\\Student.csproj|c:\\users\\user\\source\\sr\\nowy folder\\student\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\SR\\Student\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\zdarzeniepliku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\zdarzeniepliku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\controllers\\nadzorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:controllers\\nadzorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\controllers\\nadzorhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:controllers\\nadzorhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\ostatnieaktywnosci.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\ostatnieaktywnosci.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BBDD6C4-69E2-1D48-7C08-0921CE1C3F08}|..\\Student\\Student.csproj|c:\\users\\user\\source\\sr\\nowy folder\\student\\student.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\komputerfoldery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\komputerfoldery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\folderkomputera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\folderkomputera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\foldermonitorowany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\foldermonitorowany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\komputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\komputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\czarnalistaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\czarnalistaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\konfiguracja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\konfiguracja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\konfiguracjauzytkownika.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\konfiguracjauzytkownika.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\szczegoly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\szczegoly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\szczegolyfolderu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\szczegolyfolderu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\konfiguracja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\konfiguracja.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\views\\nadzor\\zarzadzajkomputerami.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:views\\nadzor\\zarzadzajkomputerami.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\zdarzeniepliku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\zdarzeniepliku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\folderuzytkownika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\folderuzytkownika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\models\\czarnalista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:models\\czarnalista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\SR\\Student\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\migrations\\20260411113447_dodaniefolderowmonitorowanych.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,6 +122,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\migrations\\20260413193644_addhashing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:migrations\\20260413193644_addhashing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\migrations\\20260426141405_dodajpolakomputera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:migrations\\20260426141405_dodajpolakomputera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\migrations\\20260426110544_dodajkomputery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:migrations\\20260426110544_dodajkomputery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|c:\\users\\user\\source\\sr\\nowy folder\\serwerweb\\migrations\\20260426091934_dodajczarnalistaifolderyuzytkownikow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3904B834-9481-6B40-355F-65A2A656E33E}|SerwerWeb.csproj|solutionrelative:migrations\\20260426091934_dodajczarnalistaifolderyuzytkownikow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,39 +143,365 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-09T09:30:07.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Student\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Program.cs",
+              "RelativeToolTip": "..\\Student\\Program.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAYwGQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T20:39:06.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvxUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T12:48:21.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "FolderMonitorowany.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderMonitorowany.cs",
               "RelativeDocumentMoniker": "Models\\FolderMonitorowany.cs",
               "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderMonitorowany.cs",
               "RelativeToolTip": "Models\\FolderMonitorowany.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T11:32:59.47Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T10:36:06.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OstatnieAktywnosci.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\OstatnieAktywnosci.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\OstatnieAktywnosci.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\OstatnieAktywnosci.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\OstatnieAktywnosci.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAADwv44AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T04:05:57.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-26T10:10:22.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NadzorController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NadzorController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorController.cs",
+              "RelativeToolTip": "Controllers\\NadzorController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T12:47:33.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NadzorHub.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorHub.cs",
+              "RelativeDocumentMoniker": "Controllers\\NadzorHub.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorHub.cs",
+              "RelativeToolTip": "Controllers\\NadzorHub.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T08:34:12.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FolderKomputera.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderKomputera.cs",
+              "RelativeDocumentMoniker": "Models\\FolderKomputera.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderKomputera.cs",
+              "RelativeToolTip": "Models\\FolderKomputera.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T11:00:00Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KomputerFoldery.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\KomputerFoldery.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\KomputerFoldery.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\KomputerFoldery.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\KomputerFoldery.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv2QAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-26T14:12:51.143Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Student.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Student.csproj",
+              "RelativeDocumentMoniker": "..\\Student\\Student.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Student.csproj",
+              "RelativeToolTip": "..\\Student\\Student.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-15T22:00:16.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Index.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\Index.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T08:30:19.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Komputer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\Komputer.cs",
+              "RelativeDocumentMoniker": "Models\\Komputer.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\Komputer.cs",
+              "RelativeToolTip": "Models\\Komputer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T10:58:32.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CzarnaListaView.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\CzarnaListaView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\CzarnaListaView.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\CzarnaListaView.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\CzarnaListaView.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAADwv18AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-26T09:25:00.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Konfiguracja.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Konfiguracja.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\Konfiguracja.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Konfiguracja.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\Konfiguracja.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvyAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-11T11:55:10.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "KonfiguracjaUzytkownika.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\KonfiguracjaUzytkownika.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\KonfiguracjaUzytkownika.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\KonfiguracjaUzytkownika.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\KonfiguracjaUzytkownika.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAADwv24AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-26T09:25:18.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Szczegoly.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Szczegoly.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\Szczegoly.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Szczegoly.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\Szczegoly.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvz8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T08:33:04.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SzczegolyFolderu.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\SzczegolyFolderu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\SzczegolyFolderu.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\SzczegolyFolderu.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\SzczegolyFolderu.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvz0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-13T08:36:32.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ZarzadzajKomputerami.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\ZarzadzajKomputerami.cshtml",
+              "RelativeDocumentMoniker": "Views\\Nadzor\\ZarzadzajKomputerami.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\ZarzadzajKomputerami.cshtml",
+              "RelativeToolTip": "Views\\Nadzor\\ZarzadzajKomputerami.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAADwv3UAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-26T11:03:26.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20260426141405_DodajPolaKomputera.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426141405_DodajPolaKomputera.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260426141405_DodajPolaKomputera.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426141405_DodajPolaKomputera.cs",
+              "RelativeToolTip": "Migrations\\20260426141405_DodajPolaKomputera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T14:14:06.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20260426110544_DodajKomputery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426110544_DodajKomputery.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260426110544_DodajKomputery.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426110544_DodajKomputery.cs",
+              "RelativeToolTip": "Migrations\\20260426110544_DodajKomputery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T11:05:45.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "ZdarzeniePliku.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ZdarzeniePliku.cs",
               "RelativeDocumentMoniker": "Models\\ZdarzeniePliku.cs",
               "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ZdarzeniePliku.cs",
               "RelativeToolTip": "Models\\ZdarzeniePliku.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA0wBMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T11:32:42.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T09:17:00.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20260426091934_DodajCzarnaListaIFolderyUzytkownikow.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426091934_DodajCzarnaListaIFolderyUzytkownikow.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260426091934_DodajCzarnaListaIFolderyUzytkownikow.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260426091934_DodajCzarnaListaIFolderyUzytkownikow.cs",
+              "RelativeToolTip": "Migrations\\20260426091934_DodajCzarnaListaIFolderyUzytkownikow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T09:19:34.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FolderUzytkownika.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderUzytkownika.cs",
+              "RelativeDocumentMoniker": "Models\\FolderUzytkownika.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\FolderUzytkownika.cs",
+              "RelativeToolTip": "Models\\FolderUzytkownika.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T09:04:51.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T11:37:47.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CzarnaLista.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\CzarnaLista.cs",
+              "RelativeDocumentMoniker": "Models\\CzarnaLista.cs",
+              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\CzarnaLista.cs",
+              "RelativeToolTip": "Models\\CzarnaLista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T09:04:15.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Student\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\Student\\Program.cs",
@@ -123,122 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Nadzor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Index.cshtml",
-              "RelativeToolTip": "Views\\Nadzor\\Index.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAcwHkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-13T08:30:19.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NadzorController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\NadzorController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\NadzorController.cs*",
-              "RelativeToolTip": "Controllers\\NadzorController.cs*",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAYwLkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T12:47:33.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OstatnieAktywnosci.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\OstatnieAktywnosci.cshtml",
-              "RelativeDocumentMoniker": "Views\\Nadzor\\OstatnieAktywnosci.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\OstatnieAktywnosci.cshtml",
-              "RelativeToolTip": "Views\\Nadzor\\OstatnieAktywnosci.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAswGYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-15T04:05:57.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Szczegoly.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Szczegoly.cshtml",
-              "RelativeDocumentMoniker": "Views\\Nadzor\\Szczegoly.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Szczegoly.cshtml*",
-              "RelativeToolTip": "Views\\Nadzor\\Szczegoly.cshtml*",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwD8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-13T08:33:04.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T12:48:21.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T10:36:06.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Student\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\Student\\Program.cs",
-              "RelativeToolTip": "..\\Student\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T20:39:06.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SzczegolyFolderu.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\SzczegolyFolderu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Nadzor\\SzczegolyFolderu.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\SzczegolyFolderu.cshtml",
-              "RelativeToolTip": "Views\\Nadzor\\SzczegolyFolderu.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAswD0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-13T08:36:32.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 30,
               "Title": "20260413193644_AddHashing.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260413193644_AddHashing.cs",
               "RelativeDocumentMoniker": "Migrations\\20260413193644_AddHashing.cs",
@@ -250,43 +524,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Konfiguracja.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Konfiguracja.cshtml",
-              "RelativeDocumentMoniker": "Views\\Nadzor\\Konfiguracja.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Views\\Nadzor\\Konfiguracja.cshtml",
-              "RelativeToolTip": "Views\\Nadzor\\Konfiguracja.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvxkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-11T11:55:10.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T11:37:47.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "20260411114651_DodajTabeleFolderow_Final.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260411114651_DodajTabeleFolderow_Final.cs",
               "RelativeDocumentMoniker": "Migrations\\20260411114651_DodajTabeleFolderow_Final.cs",
               "ToolTip": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260411114651_DodajTabeleFolderow_Final.cs",
               "RelativeToolTip": "Migrations\\20260411114651_DodajTabeleFolderow_Final.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T11:46:51.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "20260411113447_DodanieFolderowMonitorowanych.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260411113447_DodanieFolderowMonitorowanych.cs",
               "RelativeDocumentMoniker": "Migrations\\20260411113447_DodanieFolderowMonitorowanych.cs",
@@ -298,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "SerwerWeb.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\SerwerWeb.csproj",
               "RelativeDocumentMoniker": "SerwerWeb.csproj",
@@ -310,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 28,
               "Title": "20260401124905_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\SR\\Nowy folder\\SerwerWeb\\Migrations\\20260401124905_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20260401124905_InitialCreate.cs",

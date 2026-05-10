@@ -1,0 +1,219 @@
+﻿@* PLIK: Views/Nadzor/KomputerFoldery.cshtml *@
+@model webserwer.Models.Komputer
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h2>
+                🖥 @Model.NazwaKomputera
+                @if (Model.Online)
+                {
+                    <span class="badge bg-success ms-2">● Online</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary ms-2">● Offline</span>
+                }
+            </h2>
+            <small class="text-muted">
+                Student: <strong>@Model.NazwaStudenta</strong>
+                &nbsp;|&nbsp;
+                Ostatnio widziany: @Model.OstatnioWidziany.ToString("dd.MM.yyyy HH:mm")
+            </small>
+        </div>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+    </div>
+
+    <div class="row">
+        @* LEWA: Przeglądarka folderów zdalnych *@
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <span>📂 Foldery na komputerze</span>
+                    @if (!Model.Online)
+                    {
+                        <span class="badge bg-warning text-dark">Komputer offline</span>
+                    }
+                </div>
+                <div class="card-body p-2" style="min-height: 400px; max-height: 550px; overflow-y: auto;">
+                    @if (Model.Online)
+                    {
+                        <div id="loadingInfo" class="text-center text-muted p-4">
+                            <div class="spinner-border spinner-border-sm me-2"></div>
+                            Ładowanie struktury folderów...
+                        </div>
+                        <div id="errorInfo" class="alert alert-danger" style="display:none"></div>
+                        <ul id="drzewo" class="list-unstyled mb-0" style="display:none; font-size: 0.9rem;"></ul>
+                    }
+                    else
+                    {
+                        <div class="text-center text-muted p-5">
+                            <p>Komputer jest offline.<br>Poczekaj aż agent się połączy.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @* PRAWA: Śledzone foldery *@
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    ✅ Śledzone foldery (@Model.Foldery.Count)
+                </div>
+                <div class="card-body p-0">
+                    @if (Model.Foldery.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var f in Model.Foldery)
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+                                    <div>
+                                        <span>📁 <strong>@f.NazwaWyswietlana</strong></span><br />
+                                        <small class="text-muted"><code>@f.Sciezka</code></small>
+                                    </div>
+                                    <form asp-action="UsunFolderKomputera" method="post"
+                                          onsubmit="return confirm('Usunąć folder z listy śledzonych?')">
+                                        <input type="hidden" name="id" value="@f.Id" />
+                                        <button class="btn btn-sm btn-outline-danger">🗑</button>
+                                    </form>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-center text-muted p-4">
+                            <em>Brak śledzonych folderów.<br />Kliknij „＋ Śledź" po lewej, aby dodać.</em>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Formularz pomocniczy wypełniany przez JS *@
+<form id="formDodaj" asp-action="DodajFolderKomputera" method="post" style="display:none">
+    <input type="hidden" name="komputerId" value="@Model.Id" />
+    <input type="hidden" name="sciezka" id="inputSciezka" />
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <script>
+        const komputerNazwa = "@Model.NazwaKomputera";
+        const komputerOnline = @(Model.Online ? "true" : "false");
+
+        function pokazBlad(msg) {
+            const el = document.getElementById("errorInfo");
+            if (el) { el.textContent = msg; el.style.display = "block"; }
+            const spinner = document.getElementById("loadingInfo");
+            if (spinner) spinner.style.display = "none";
+        }
+
+        function pobierzNazwe(sciezka) {
+            const s = sciezka.replace(/[/\\]+$/, "");
+            const parts = s.split(/[/\\]/);
+            const ostatni = parts[parts.length - 1];
+            return ostatni || sciezka;
+        }
+
+        if (!komputerOnline) { /* offline */ }
+        else {
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/nadzorHub")
+            .withAutomaticReconnect()
+            .build();
+
+        const otwarteDrzewa = {};
+
+        connection.on("OdebranoDrzewo", (nazwaKomp, sciezka, podfoldery) => {
+            if (nazwaKomp !== komputerNazwa) return;
+
+            document.getElementById("loadingInfo").style.display = "none";
+            const drzewoRoot = document.getElementById("drzewo");
+            drzewoRoot.style.display = "block";
+
+            const cel = (sciezka === "" || sciezka === null)
+                ? drzewoRoot
+                : otwarteDrzewa[sciezka];
+
+            if (!cel) return;
+            cel.innerHTML = "";
+
+            if (!podfoldery || podfoldery.length === 0) {
+                cel.innerHTML = '<li class="text-muted ps-2 small py-1">Brak podfolderów</li>';
+                return;
+            }
+
+            podfoldery.forEach(folder => {
+                const nazwa = pobierzNazwe(folder);
+                const li = document.createElement("li");
+                li.style.padding = "2px 0";
+                li.innerHTML = `
+                    <div class="d-flex align-items-center gap-1 py-1">
+                        <button class="btn btn-link btn-sm p-0 text-decoration-none toggle-btn"
+                                style="width:20px;color:#555" title="Rozwiń">▶</button>
+                        <span style="flex:1">📁 <strong>${nazwa}</strong>
+                            <small class="text-muted ms-1" style="font-size:0.75rem">${folder}</small>
+                        </span>
+                        <button class="btn btn-success btn-sm py-0 px-2 dodaj-btn"
+                                style="font-size:0.75rem;white-space:nowrap">＋ Śledź</button>
+                    </div>
+                    <ul class="list-unstyled ps-3 subfoldery" style="display:none"></ul>
+                `;
+
+                li.querySelector(".toggle-btn").addEventListener("click", function () {
+                    const sub = li.querySelector(".subfoldery");
+                    if (sub.style.display === "none") {
+                        sub.style.display = "block";
+                        this.textContent = "▼";
+                        otwarteDrzewa[folder] = sub;
+                        pobierzDrzewo(folder);
+                    } else {
+                        sub.style.display = "none";
+                        this.textContent = "▶";
+                    }
+                });
+
+                li.querySelector(".dodaj-btn").addEventListener("click", function () {
+                    if (confirm("Śledzić folder:\n" + folder + "?")) {
+                        document.getElementById("inputSciezka").value = folder;
+                        document.getElementById("formDodaj").submit();
+                    }
+                });
+
+                cel.appendChild(li);
+            });
+        });
+
+        async function pobierzDrzewo(sciezka) {
+            try {
+                const resp = await fetch("/api/nadzor/zadaj-drzewo", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nazwaKomputera: komputerNazwa, sciezka: sciezka })
+                });
+                if (!resp.ok) {
+                    const txt = await resp.text();
+                    pokazBlad("Błąd serwera: " + txt);
+                }
+            } catch (e) {
+                pokazBlad("Błąd połączenia: " + e.message);
+            }
+        }
+
+        connection.start()
+            .then(async () => {
+                await connection.invoke("DolaczDoGrupyAdmin");
+                await pobierzDrzewo("");
+            })
+            .catch(e => {
+                pokazBlad("Błąd SignalR: " + e.message);
+            });
+
+        }
+    </script>
+}
