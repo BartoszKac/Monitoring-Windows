@@ -1,8 +1,6 @@
-﻿// =============================================
-// PLIK: Controllers/NadzorHub.cs  (ZASTĄP – finalna wersja)
-// =============================================
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Concurrent;
 using webserwer.Models;
 
 namespace SerwerWeb.Controllers
@@ -10,24 +8,23 @@ namespace SerwerWeb.Controllers
     public class NadzorHub : Hub
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<NadzorHub> _logger;
 
-        public NadzorHub(ApplicationDbContext context)
+        // Klucz: "nazwaKomputera|sciezka" → connectionId przeglądarki czekającej na odpowiedź
+        // Dzięki temu wiele równoległych żądań (np. rozwijanie wielu podfolderów naraz) działa poprawnie
+        private static readonly ConcurrentDictionary<string, string> _oczekujacy = new();
+
+        public NadzorHub(ApplicationDbContext context, ILogger<NadzorHub> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        // ── Admin dołącza do grupy "admin" żeby odbierać odpowiedzi od agentów ──
-        public async Task DolaczDoGrupyAdmin()
-        {
-            await Groups.AddToGroupAsync(Context.ConnectionId, "admin");
-        }
-
-        // ── Agent rejestruje się przy starcie ────────────────────────────────────
+        // ─── REJESTRACJA AGENTA ───────────────────────────────────────────────────
         public async Task Zarejestruj(string nazwaKomputera, string nazwaStudenta)
         {
-            await Groups.AddToGroupAsync(Context.ConnectionId, nazwaKomputera);
-
             var komp = await _context.Komputery
+                .Include(k => k.Foldery)
                 .FirstOrDefaultAsync(k => k.NazwaKomputera == nazwaKomputera);
 
             if (komp == null)
@@ -36,46 +33,79 @@ namespace SerwerWeb.Controllers
                 {
                     NazwaKomputera = nazwaKomputera,
                     NazwaStudenta = nazwaStudenta,
-                    DataDodania = DateTime.Now,
+                    Online = true,
+                    ConnectionId = Context.ConnectionId,
+                    OstatnioWidziany = DateTime.Now,
+                    DataDodania = DateTime.Now
                 };
                 _context.Komputery.Add(komp);
             }
             else
             {
+                komp.Online = true;
+                komp.ConnectionId = Context.ConnectionId;
                 komp.NazwaStudenta = nazwaStudenta;
+                komp.OstatnioWidziany = DateTime.Now;
             }
-
-            komp.Online = true;
-            komp.OstatnioWidziany = DateTime.Now;
-            komp.ConnectionId = Context.ConnectionId;
 
             await _context.SaveChangesAsync();
 
-            // Poinformuj panel admina
-            await Clients.Group("admin").SendAsync("AgentPolaczony", new
+            await Groups.AddToGroupAsync(Context.ConnectionId, nazwaKomputera);
+
+            var sciezki = komp.Foldery.Select(f => f.Sciezka).ToList();
+            await Clients.Caller.SendAsync("UstawSledzenie", sciezki);
+
+            await Clients.Group("Admin").SendAsync("AgentPolaczony", new
             {
-                komp.Id,
-                komp.NazwaKomputera,
-                komp.NazwaStudenta,
-                komp.OstatnioWidziany
+                nazwaKomputera,
+                nazwaStudenta,
+                connectionId = Context.ConnectionId
             });
 
-            // Wyślij agentowi aktualne foldery do śledzenia
-            var sledzone = await _context.FolderyKomputerow
-                .Where(f => f.KomputerId == komp.Id)
-                .Select(f => f.Sciezka)
-                .ToListAsync();
-
-            await Clients.Caller.SendAsync("UstawSledzenie", sledzone);
+            _logger.LogInformation("Agent zarejestrowany: {PC} dla {Student}", nazwaKomputera, nazwaStudenta);
         }
 
-        // ── Agent odsyła zawartość folderu (odpowiedź na PobierzDrzewo) ─────────
+        // ─── ADMIN DOŁĄCZA DO GRUPY POWIADOMIEŃ ──────────────────────────────────
+        public async Task DolaczDoGrupyAdmin()
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, "Admin");
+            _logger.LogInformation("Admin dołączył: {Id}", Context.ConnectionId);
+        }
+
+        // ─── PRZEGLĄDARKA ŻĄDA DRZEWA FOLDERÓW ───────────────────────────────────
+        public async Task ZadajDrzewo(string nazwaKomputera, string sciezka)
+        {
+            // Klucz złożony: komputer + ścieżka — dzięki temu równoległe żądania
+            // do różnych podfolderów nie nadpisują sobie connectionId
+            var klucz = $"{nazwaKomputera}|{sciezka ?? ""}";
+            _oczekujacy[klucz] = Context.ConnectionId;
+
+            await Clients.Group(nazwaKomputera).SendAsync("PobierzDrzewo", sciezka ?? "");
+
+            _logger.LogInformation("ZadajDrzewo → {PC} ścieżka='{Path}'", nazwaKomputera, sciezka);
+        }
+
+        // ─── AGENT ODPOWIADA DRZEWEM FOLDERÓW ────────────────────────────────────
         public async Task OdpowiedzDrzewo(string nazwaKomputera, string sciezka, List<string> podfoldery)
         {
-            await Clients.Group("admin").SendAsync("OdebranoDrzewo", nazwaKomputera, sciezka, podfoldery);
+            var klucz = $"{nazwaKomputera}|{sciezka ?? ""}";
+            var ile = podfoldery?.Count ?? 0;
+
+            if (_oczekujacy.TryRemove(klucz, out var connId))
+            {
+                _logger.LogInformation("✅ OdpowiedzDrzewo → przeglądarka {PC} ścieżka='{Path}' ({Count} folderów)",
+                    nazwaKomputera, sciezka, ile);
+                await Clients.Client(connId).SendAsync("OdpowiedzDrzewaFolderow", nazwaKomputera, sciezka, podfoldery);
+            }
+            else
+            {
+                _logger.LogWarning("⚠️ OdpowiedzDrzewo — brak oczekującej przeglądarki dla klucza '{Key}', wysyłam do grupy Admin ({Count} folderów)",
+                    klucz, ile);
+                await Clients.Group("Admin").SendAsync("OdpowiedzDrzewaFolderow", nazwaKomputera, sciezka, podfoldery);
+            }
         }
 
-        // ── Rozłączenie agenta ───────────────────────────────────────────────────
+        // ─── ROZŁĄCZENIE ──────────────────────────────────────────────────────────
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             var komp = await _context.Komputery
@@ -85,10 +115,15 @@ namespace SerwerWeb.Controllers
             {
                 komp.Online = false;
                 komp.OstatnioWidziany = DateTime.Now;
-                komp.ConnectionId = null;
                 await _context.SaveChangesAsync();
 
-                await Clients.Group("admin").SendAsync("AgentRozlaczony", komp.NazwaKomputera);
+                await Clients.Group("Admin").SendAsync("AgentRozlaczony", new
+                {
+                    nazwaKomputera = komp.NazwaKomputera,
+                    nazwaStudenta = komp.NazwaStudenta
+                });
+
+                _logger.LogInformation("Agent rozłączony: {PC}", komp.NazwaKomputera);
             }
 
             await base.OnDisconnectedAsync(exception);

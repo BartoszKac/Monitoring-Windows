@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../NadzorTests/NadzorTests.csproj" />
   <Project Path="../Student/Student.csproj" />
   <Project Path="SerwerWeb.csproj" />
 </Solution>

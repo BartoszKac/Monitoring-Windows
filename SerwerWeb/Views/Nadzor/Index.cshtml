@@ -2,23 +2,109 @@
 @model List<webserwer.Models.ZdarzeniePliku>
 @using webserwer.Models
 
+@{
+    var komputery = ViewBag.Komputery as List<Komputer> ?? new();
+    var wybranyKomp = ViewBag.WybranyKomputer as string ?? "";
+    var online = komputery.Where(k => k.Online).ToList();
+    var offline = komputery.Where(k => !k.Online).ToList();
+}
+
 <div class="container-fluid mt-3">
+
+    @* ── NAGŁÓWEK ── *@
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2>🚀 Panel Nadzoru</h2>
+        <h2 class="mb-0">🚀 Panel Nadzoru</h2>
         <div class="d-flex gap-2 flex-wrap">
             <a href="@Url.Action("OstatnieAktywnosci")" class="btn btn-warning btn-sm fw-bold text-dark">🌐 Logi globalne</a>
+            <a href="@Url.Action("ZarzadzajKomputerami")" class="btn btn-outline-secondary btn-sm">⚙ Zarządzaj</a>
             <a href="@Url.Action("CzarnaListaView")" class="btn btn-danger btn-sm fw-bold">🚫 Czarna lista</a>
         </div>
     </div>
 
-    @{
-        var komputery = ViewBag.Komputery as List<Komputer> ?? new();
-        var wybranyKomp = ViewBag.WybranyKomputer as string ?? "";
-    }
+    @* ── BLOK STATUSÓW KOMPUTERÓW ── *@
+    <div class="row g-3 mb-4" id="statusKomputerow">
 
+        @* Online *@
+        @foreach (var k in online)
+        {
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3" id="karta-@k.NazwaKomputera.Replace(" ", "_")">
+                <div class="card border-0 shadow-sm h-100 border-start border-4 border-success">
+                    <div class="card-body py-2 px-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="badge bg-success mb-1">● ONLINE</span>
+                                <h6 class="mb-0 fw-bold">🖥 @k.NazwaKomputera</h6>
+                                <small class="text-muted">👤 <span class="student-name">@k.NazwaStudenta</span></small>
+                            </div>
+                            <div class="text-end">
+                                <a href="@Url.Action("Index", new { komputer = k.NazwaKomputera })"
+                                   class="btn btn-sm btn-outline-primary mb-1 d-block">📋 Logi</a>
+                                <a href="@Url.Action("KomputerFoldery", new { id = k.Id })"
+                                   class="btn btn-sm btn-outline-secondary d-block">⚙ Foldery</a>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                📁 @k.Foldery.Count śledzon@(k.Foldery.Count == 1 ? "y" : "ych") folder@(k.Foldery.Count == 1 ? "" : "ów")
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @* Offline *@
+        @foreach (var k in offline)
+        {
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3" id="karta-@k.NazwaKomputera.Replace(" ", "_")">
+                <div class="card border-0 shadow-sm h-100 border-start border-4 border-secondary opacity-75">
+                    <div class="card-body py-2 px-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="badge bg-secondary mb-1">⚫ OFFLINE</span>
+                                <h6 class="mb-0 fw-bold">🖥 @k.NazwaKomputera</h6>
+                                <small class="text-muted">👤 <span class="student-name">@k.NazwaStudenta</span></small>
+                            </div>
+                            <div class="text-end">
+                                <a href="@Url.Action("Index", new { komputer = k.NazwaKomputera })"
+                                   class="btn btn-sm btn-outline-secondary mb-1 d-block">📋 Logi</a>
+                                <a href="@Url.Action("KomputerFoldery", new { id = k.Id })"
+                                   class="btn btn-sm btn-outline-secondary d-block">⚙ Foldery</a>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">
+                                Ostatnio: @k.OstatnioWidziany.ToString("HH:mm dd.MM.yyyy")
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (!komputery.Any())
+        {
+            <div class="col-12">
+                <div class="alert alert-secondary">Żaden agent się jeszcze nie połączył.</div>
+            </div>
+        }
+    </div>
+
+    @* ── PODSUMOWANIE LICZNIKÓW ── *@
+    <div class="d-flex gap-3 mb-3 align-items-center flex-wrap">
+        <span class="badge bg-success fs-6 px-3 py-2">
+            🟢 Online: <strong id="licznikOnline">@online.Count</strong>
+        </span>
+        <span class="badge bg-secondary fs-6 px-3 py-2">
+            ⚫ Offline: <strong id="licznikOffline">@offline.Count</strong>
+        </span>
+        <span class="text-muted small ms-auto" id="ostatniaAktualizacja"></span>
+    </div>
+
+    @* ── ZAKŁADKI FILTROWANIA LOGÓW ── *@
     <div class="card mb-3 shadow-sm">
         <div class="card-header p-0 bg-dark">
-            <ul class="nav nav-tabs border-0" style="flex-wrap: nowrap; overflow-x: auto;">
+            <ul class="nav nav-tabs border-0" style="flex-wrap:nowrap; overflow-x:auto;">
                 <li class="nav-item">
                     <a class="nav-link @(string.IsNullOrEmpty(wybranyKomp) ? "active bg-white text-dark" : "text-white")"
                        href="@Url.Action("Index")">🌐 Wszystkie</a>
@@ -37,56 +123,9 @@
                 }
             </ul>
         </div>
-
-        <div class="card-body py-2">
-            @if (!string.IsNullOrEmpty(wybranyKomp))
-            {
-                var komp = komputery.FirstOrDefault(k => k.NazwaKomputera == wybranyKomp);
-                if (komp != null)
-                {
-                    <div class="d-flex align-items-center gap-3 flex-wrap">
-                        @if (komp.Online)
-                        {
-                            <span class="badge bg-success">● Online</span>
-                        }
-                        else
-                        {
-                            <span class="badge bg-secondary">● Offline – @komp.OstatnioWidziany.ToString("HH:mm dd.MM")</span>
-                        }
-                        <span class="text-muted small">Student: <strong>@komp.NazwaStudenta</strong></span>
-                        <span class="text-muted small">Śledzone foldery: <strong>@komp.Foldery.Count</strong></span>
-                        <a href="@Url.Action("KomputerFoldery", new { id = komp.Id })" class="btn btn-sm btn-outline-primary">
-                            ⚙ Zarządzaj folderami
-                        </a>
-                    </div>
-                }
-            }
-            else
-            {
-                <div class="row g-2">
-                    @foreach (var k in komputery)
-                    {
-                        <div class="col-auto">
-                            <div class="border rounded px-3 py-2 d-flex align-items-center gap-2 bg-light">
-                                <span>@(k.Online ? "🟢" : "⚫")</span>
-                                <div>
-                                    <strong>@k.NazwaKomputera</strong>
-                                    <small class="text-muted d-block">@k.NazwaStudenta</small>
-                                </div>
-                                <a href="@Url.Action("KomputerFoldery", new { id = k.Id })"
-                                   class="btn btn-sm btn-outline-secondary ms-2" title="Zarządzaj folderami">⚙</a>
-                            </div>
-                        </div>
-                    }
-                    @if (!komputery.Any())
-                    {
-                        <div class="col"><em class="text-muted">Żaden agent się jeszcze nie połączył.</em></div>
-                    }
-                </div>
-            }
-        </div>
     </div>
 
+    @* ── HISTORIA AKTYWNOŚCI ── *@
     <div class="d-flex justify-content-between align-items-center mb-2">
         <h5>
             Historia aktywności
@@ -99,7 +138,7 @@
     </div>
 
     <div class="table-responsive shadow-sm">
-        <table class="table table-hover align-middle mb-0">
+        <table class="table table-hover align-middle mb-0" id="tabelaAktywnosci">
             <thead class="table-dark">
                 <tr>
                     <th>Komputer</th>
@@ -158,13 +197,139 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
     <script>
         const hub = new signalR.HubConnectionBuilder()
-            .withUrl("/nadzorHub")
-            .withAutomaticReconnect()
-            .build();
+        .withUrl("/nadzorHub")
+        .withAutomaticReconnect()
+        .build();
 
-        hub.on("AgentPolaczony", () => location.reload());
-        hub.on("AgentRozlaczony", () => location.reload());
+        // ── Aktualizacja karty komputera po zmianie statusu ──────────────────────
 
-        hub.start().then(() => hub.invoke("DolaczDoGrupyAdmin")).catch(console.error);
+        function aktualizujLiczniki() {
+        const karty = document.querySelectorAll("#statusKomputerow .card");
+        let online = 0, offline = 0;
+        karty.forEach(k => {
+        if (k.classList.contains("border-success")) online++;
+        else offline++;
+        });
+        document.getElementById("licznikOnline").textContent  = online;
+        document.getElementById("licznikOffline").textContent = offline;
+        document.getElementById("ostatniaAktualizacja").textContent =
+        "Odświeżono: " + new Date().toLocaleTimeString("pl-PL");
+        }
+
+        // Agent się połączył → zmień kartę na Online
+        hub.on("AgentPolaczony", (dane) => {
+        const id = "karta-" + dane.nazwaKomputera.replace(/ /g, "_");
+        const div = document.getElementById(id);
+        if (!div) {
+        // Nowy komputer – przeładuj stronę żeby pobrać id/foldery z serwera
+        location.reload();
+        return;
+        }
+        const card = div.querySelector(".card");
+        card.classList.remove("border-secondary", "opacity-75");
+        card.classList.add("border-success");
+
+        const badge = div.querySelector(".badge");
+        badge.className = "badge bg-success mb-1";
+        badge.textContent = "● ONLINE";
+
+        // Aktualizuj nazwę studenta jeśli się zmieniła
+        const studentSpan = div.querySelector(".student-name");
+        if (studentSpan && dane.nazwaStudenta) studentSpan.textContent = dane.nazwaStudenta;
+
+        // Usuń linię "Ostatnio:"
+        const small = div.querySelectorAll(".card-body small");
+        small.forEach(s => { if (s.textContent.startsWith("Ostatnio:")) s.textContent = ""; });
+
+        aktualizujLiczniki();
+        });
+
+        // Agent się rozłączył → zmień kartę na Offline
+        hub.on("AgentRozlaczony", (dane) => {
+        const id = "karta-" + dane.nazwaKomputera.replace(/ /g, "_");
+        const div = document.getElementById(id);
+        if (!div) return;
+
+        const card = div.querySelector(".card");
+        card.classList.remove("border-success");
+        card.classList.add("border-secondary", "opacity-75");
+
+        const badge = div.querySelector(".badge");
+        badge.className = "badge bg-secondary mb-1";
+        badge.textContent = "⚫ OFFLINE";
+
+        // Aktualizuj czas ostatniego widzenia
+        const smalls = div.querySelectorAll(".card-body small");
+        smalls.forEach(s => {
+        if (!s.textContent.startsWith("👤")) {
+        s.textContent = "Ostatnio: " + dane.ostatnioWidziany;
+        }
+        });
+
+        aktualizujLiczniki();
+        });
+
+        // Nowe zdarzenie → dodaj wiersz do tabeli
+        hub.on("NoweZdarzenie", (z) => {
+        const tbody = document.querySelector("#tabelaAktywnosci tbody");
+        const row = document.createElement("tr");
+        if (z.czyToKopia) row.className = "table-danger";
+
+        const data = new Date(z.dataLogowania);
+        const dataStr = data.toLocaleDateString("pl-PL", {day:"2-digit", month:"2-digit", year:"numeric"});
+        const czasStr = data.toLocaleTimeString("pl-PL", {hour:"2-digit", minute:"2-digit"});
+
+        row.innerHTML = `
+        <td><a href="/Nadzor/Index?komputer=${encodeURIComponent(z.nazwaKomputera)}"
+        class="badge bg-dark text-decoration-none">🖥 ${z.nazwaKomputera}</a></td>
+        <td><strong>${z.nazwaStudenta}</strong></td>
+        <td>
+        <a href="/Nadzor/Szczegoly/${z.id}" class="text-decoration-none fw-bold">📄 ${z.nazwaPliku}</a>
+        ${z.czyToKopia ? '<br><small class="text-danger">⚠ Duplikat!</small>' : ''}
+        </td>
+        <td class="small text-muted">
+        ${dataStr}
+        <span class="badge bg-light text-dark border">${czasStr}</span>
+        </td>
+        <td>
+        ${z.czyToKopia
+        ? '<span class="badge bg-danger">KOPIA</span>'
+        : '<span class="badge bg-success">OK</span>'}
+        </td>`;
+
+        // Wstaw na górę tabeli i usuń wiersz "Brak danych" jeśli był
+        const brak = tbody.querySelector("tr td[colspan]");
+        if (brak) brak.parentElement.remove();
+
+        tbody.insertBefore(row, tbody.firstChild);
+
+        // Ogranicz do 200 wierszy
+        while (tbody.rows.length > 200) tbody.deleteRow(tbody.rows.length - 1);
+        });
+
+        // ── Start ─────────────────────────────────────────────────────────────────
+
+        hub.start()
+        .then(() => {
+        hub.invoke("DolaczDoGrupyAdmin").catch(console.error);
+        aktualizujLiczniki();
+        })
+        .catch(console.error);
+
+        // Odświeżaj liczniki przy reconnect
+        hub.onreconnected(() => hub.invoke("DolaczDoGrupyAdmin").catch(console.error));
     </script>
+    <style>
+        @@keyframes fadeIn {
+        from {
+        opacity: 0;
+        transform: translateY(10px);
+        }
+
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+    </style>
 }

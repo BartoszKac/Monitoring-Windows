@@ -1,10 +1,9 @@
 version: '3.8'
-
 services:
   pc-01:
     build: .
     container_name: agent-kaczmarczyk
-    restart: unless-stopped  # <--- TO ROBI Z KONTENERA "USŁUGĘ"
+    restart: unless-stopped
     environment:
       - AGENT_PC_NAME=LAB01-PC01
       - AGENT_STUDENT_NAME=Bartosz Kaczmarczyk

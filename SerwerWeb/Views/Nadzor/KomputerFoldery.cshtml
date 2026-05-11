@@ -4,216 +4,432 @@
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
-            <h2>
-                🖥 @Model.NazwaKomputera
-                @if (Model.Online)
-                {
-                    <span class="badge bg-success ms-2">● Online</span>
-                }
-                else
-                {
-                    <span class="badge bg-secondary ms-2">● Offline</span>
-                }
-            </h2>
+            <h2>🖥 @Model.NazwaKomputera</h2>
             <small class="text-muted">
                 Student: <strong>@Model.NazwaStudenta</strong>
                 &nbsp;|&nbsp;
                 Ostatnio widziany: @Model.OstatnioWidziany.ToString("dd.MM.yyyy HH:mm")
             </small>
         </div>
-        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">Powrót</a>
+        <a href="@Url.Action("Index")" class="btn btn-outline-secondary">← Powrót</a>
     </div>
 
-    <div class="row">
-        @* LEWA: Przeglądarka folderów zdalnych *@
-        <div class="col-md-6">
-            <div class="card shadow-sm">
+    <div class="row g-3">
+
+        @* ── LEWA: Przeglądarka folderów zdalnych ── *@
+        <div class="col-md-7">
+            <div class="card shadow-sm h-100">
                 <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
                     <span>📂 Foldery na komputerze</span>
-                    @if (!Model.Online)
-                    {
-                        <span class="badge bg-warning text-dark">Komputer offline</span>
-                    }
+                    <div class="d-flex align-items-center gap-2">
+                        <span id="statusBadge" class="badge @(Model.Online ? "bg-success" : "bg-danger")">
+                            @(Model.Online ? "● Online" : "○ Offline")
+                        </span>
+                        <button id="btnOdswiez" class="btn btn-sm btn-outline-light" onclick="odswiez()" @(Model.Online ? "" : "disabled")>
+                            🔄 Odśwież
+                        </button>
+                    </div>
                 </div>
-                <div class="card-body p-2" style="min-height: 400px; max-height: 550px; overflow-y: auto;">
-                    @if (Model.Online)
-                    {
-                        <div id="loadingInfo" class="text-center text-muted p-4">
-                            <div class="spinner-border spinner-border-sm me-2"></div>
-                            Ładowanie struktury folderów...
-                        </div>
-                        <div id="errorInfo" class="alert alert-danger" style="display:none"></div>
-                        <ul id="drzewo" class="list-unstyled mb-0" style="display:none; font-size: 0.9rem;"></ul>
-                    }
-                    else
-                    {
-                        <div class="text-center text-muted p-5">
-                            <p>Komputer jest offline.<br>Poczekaj aż agent się połączy.</p>
-                        </div>
-                    }
+                <div class="card-body p-2" style="min-height:400px; max-height:550px; overflow-y:auto;">
+                    <div id="loadingInfo" class="text-center text-muted p-4 @(Model.Online ? "" : "d-none")">
+                        <div class="spinner-border spinner-border-sm me-2"></div>
+                        Łączenie z agentem...
+                    </div>
+                    <div id="offlineInfo" class="text-center text-muted p-5 @(Model.Online ? "d-none" : "")">
+                        <p>
+                            🔌 Komputer jest offline.<br>
+                            Wpisz ścieżkę ręcznie po prawej stronie.<br>
+                            <small>Folder zostanie aktywowany gdy agent wróci online.</small>
+                        </p>
+                        <small class="text-info">⏳ Oczekuję na ponowne połączenie agenta...</small>
+                    </div>
+                    <div id="timeoutInfo" class="alert alert-warning d-none">
+                        ⏱ Agent nie odpowiedział w ciągu 15 sekund. Komputer może być online w bazie, ale agent nie reaguje.<br>
+                        <button class="btn btn-sm btn-warning mt-2" onclick="odswiez()">🔄 Spróbuj ponownie</button>
+                    </div>
+                    <div id="errorInfo" class="alert alert-danger d-none"></div>
+                    <ul id="drzewo" class="list-unstyled mb-0 d-none" style="font-size:0.9rem;"></ul>
                 </div>
             </div>
         </div>
 
-        @* PRAWA: Śledzone foldery *@
-        <div class="col-md-6">
+        @* ── PRAWA: Śledzone foldery + ręczne dodawanie ── *@
+        <div class="col-md-5 d-flex flex-column gap-3">
+
             <div class="card shadow-sm">
-                <div class="card-header bg-success text-white">
-                    ✅ Śledzone foldery (@Model.Foldery.Count)
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                    <span>✅ Śledzone foldery</span>
+                    <span id="liczbaFolderow" class="badge bg-white text-success">@Model.Foldery.Count</span>
                 </div>
-                <div class="card-body p-0">
+                <div class="card-body p-0" id="listaFolderow">
                     @if (Model.Foldery.Any())
                     {
                         <ul class="list-group list-group-flush">
                             @foreach (var f in Model.Foldery)
                             {
-                                <li class="list-group-item d-flex justify-content-between align-items-center py-2">
-                                    <div>
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2" id="folder-@f.Id">
+                                    <div style="overflow:hidden">
                                         <span>📁 <strong>@f.NazwaWyswietlana</strong></span><br />
-                                        <small class="text-muted"><code>@f.Sciezka</code></small>
+                                        <small class="text-muted"><code style="word-break:break-all">@f.Sciezka</code></small>
                                     </div>
-                                    <form asp-action="UsunFolderKomputera" method="post"
-                                          onsubmit="return confirm('Usunąć folder z listy śledzonych?')">
-                                        <input type="hidden" name="id" value="@f.Id" />
-                                        <button class="btn btn-sm btn-outline-danger">🗑</button>
-                                    </form>
+                                    <button class="btn btn-sm btn-outline-danger ms-2 flex-shrink-0"
+                                            onclick="usunFolder(@f.Id, '@f.Sciezka.Replace("\\", "\\\\").Replace("'", "\\'")')">
+                                        🗑
+                                    </button>
                                 </li>
                             }
                         </ul>
                     }
                     else
                     {
-                        <div class="text-center text-muted p-4">
-                            <em>Brak śledzonych folderów.<br />Kliknij „＋ Śledź" po lewej, aby dodać.</em>
+                        <div class="text-center text-muted p-3" id="brakFolderow">
+                            <em>Brak śledzonych folderów.</em>
                         </div>
                     }
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-light fw-bold">✏️ Dodaj folder ręcznie</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" id="inputReczny" class="form-control"
+                               placeholder="np. C:\Zadania\Grupa1" />
+                        <button class="btn btn-success" onclick="dodajFolderReczny()">➕ Dodaj</button>
+                    </div>
+                    <small class="text-muted mt-1 d-block" id="infoSledzenie">
+                        @if (Model.Online)
+                        {
+                            <text>Agent zostanie natychmiast powiadomiony.</text>
+                        }
+                        else
+                        {
+                            <text>⚠ Offline – folder zostanie aktywowany gdy agent wróci.</text>
+                        }
+                    </small>
+                    <div id="komunikatDodawania" class="mt-2 d-none"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-@* Formularz pomocniczy wypełniany przez JS *@
+@* Ukryty formularz fallback (POST gdy SignalR nie dostępny) *@
 <form id="formDodaj" asp-action="DodajFolderKomputera" method="post" style="display:none">
     <input type="hidden" name="komputerId" value="@Model.Id" />
-    <input type="hidden" name="sciezka" id="inputSciezka" />
+    <input type="hidden" name="sciezka" id="inputSciezkaHidden" />
 </form>
 
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
     <script>
-        const komputerNazwa = "@Model.NazwaKomputera";
-        const komputerOnline = @(Model.Online ? "true" : "false");
-
-        function pokazBlad(msg) {
-            const el = document.getElementById("errorInfo");
-            if (el) { el.textContent = msg; el.style.display = "block"; }
-            const spinner = document.getElementById("loadingInfo");
-            if (spinner) spinner.style.display = "none";
-        }
-
-        function pobierzNazwe(sciezka) {
-            const s = sciezka.replace(/[/\\]+$/, "");
-            const parts = s.split(/[/\\]/);
-            const ostatni = parts[parts.length - 1];
-            return ostatni || sciezka;
-        }
-
-        if (!komputerOnline) { /* offline */ }
-        else {
-
-        const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/nadzorHub")
-            .withAutomaticReconnect()
-            .build();
-
+        const KOMPUTER = "@Model.NazwaKomputera";
+        const KOMPUTER_ID = @Model.Id;
         const otwarteDrzewa = {};
+        let timeoutTimer = null;
+        let agentOnline = @(Model.Online ? "true" : "false");
 
-        connection.on("OdebranoDrzewo", (nazwaKomp, sciezka, podfoldery) => {
-            if (nazwaKomp !== komputerNazwa) return;
+        // ── Połączenie SignalR ───────────────────────────────────────────────────
+        const conn = new signalR.HubConnectionBuilder()
+        .withUrl("/nadzorHub")
+        .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
+        .build();
 
-            document.getElementById("loadingInfo").style.display = "none";
-            const drzewoRoot = document.getElementById("drzewo");
-            drzewoRoot.style.display = "block";
-
-            const cel = (sciezka === "" || sciezka === null)
-                ? drzewoRoot
-                : otwarteDrzewa[sciezka];
-
-            if (!cel) return;
-            cel.innerHTML = "";
-
-            if (!podfoldery || podfoldery.length === 0) {
-                cel.innerHTML = '<li class="text-muted ps-2 small py-1">Brak podfolderów</li>';
-                return;
-            }
-
-            podfoldery.forEach(folder => {
-                const nazwa = pobierzNazwe(folder);
-                const li = document.createElement("li");
-                li.style.padding = "2px 0";
-                li.innerHTML = `
-                    <div class="d-flex align-items-center gap-1 py-1">
-                        <button class="btn btn-link btn-sm p-0 text-decoration-none toggle-btn"
-                                style="width:20px;color:#555" title="Rozwiń">▶</button>
-                        <span style="flex:1">📁 <strong>${nazwa}</strong>
-                            <small class="text-muted ms-1" style="font-size:0.75rem">${folder}</small>
-                        </span>
-                        <button class="btn btn-success btn-sm py-0 px-2 dodaj-btn"
-                                style="font-size:0.75rem;white-space:nowrap">＋ Śledź</button>
-                    </div>
-                    <ul class="list-unstyled ps-3 subfoldery" style="display:none"></ul>
-                `;
-
-                li.querySelector(".toggle-btn").addEventListener("click", function () {
-                    const sub = li.querySelector(".subfoldery");
-                    if (sub.style.display === "none") {
-                        sub.style.display = "block";
-                        this.textContent = "▼";
-                        otwarteDrzewa[folder] = sub;
-                        pobierzDrzewo(folder);
-                    } else {
-                        sub.style.display = "none";
-                        this.textContent = "▶";
-                    }
-                });
-
-                li.querySelector(".dodaj-btn").addEventListener("click", function () {
-                    if (confirm("Śledzić folder:\n" + folder + "?")) {
-                        document.getElementById("inputSciezka").value = folder;
-                        document.getElementById("formDodaj").submit();
-                    }
-                });
-
-                cel.appendChild(li);
-            });
+        // ── Odbieramy odpowiedź od agenta ────────────────────────────────────────
+        conn.on("OdpowiedzDrzewaFolderow", (nazwaKomp, sciezka, podfoldery) => {
+        if (nazwaKomp !== KOMPUTER) return;
+        wyczyscTimeout();
+        renderujFoldery(sciezka, podfoldery);
         });
 
-        async function pobierzDrzewo(sciezka) {
-            try {
-                const resp = await fetch("/api/nadzor/zadaj-drzewo", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ nazwaKomputera: komputerNazwa, sciezka: sciezka })
-                });
-                if (!resp.ok) {
-                    const txt = await resp.text();
-                    pokazBlad("Błąd serwera: " + txt);
-                }
-            } catch (e) {
-                pokazBlad("Błąd połączenia: " + e.message);
-            }
+        // ── Agent połączył się (powiadomienie z huba) ────────────────────────────
+        conn.on("AgentPolaczony", (info) => {
+        if (info.nazwaKomputera !== KOMPUTER) return;
+        agentOnline = true;
+        aktualizujStatusUI(true);
+        // Automatycznie załaduj drzewo gdy agent wrócił
+        if (document.getElementById("drzewo").classList.contains("d-none") &&
+        document.getElementById("timeoutInfo").classList.contains("d-none")) {
+        odswiez();
+        }
+        });
+
+        // ── Start SignalR ────────────────────────────────────────────────────────
+        conn.start()
+        .then(async () => {
+        await conn.invoke("DolaczDoGrupyAdmin");
+        if (agentOnline) {
+        ustawTimeout();
+        await zadajDrzewo("");
+        }
+        })
+        .catch(e => pokazBlad("Błąd SignalR: " + e.message));
+
+        conn.onreconnected(async () => {
+        await conn.invoke("DolaczDoGrupyAdmin");
+        if (agentOnline) {
+        odswiez();
+        }
+        });
+
+        conn.onclose(() => {
+        console.warn("SignalR rozłączony");
+        });
+
+        // ── Timeout 15 sekund ────────────────────────────────────────────────────
+        function ustawTimeout() {
+        wyczyscTimeout();
+        timeoutTimer = setTimeout(() => {
+        if (document.getElementById("drzewo").classList.contains("d-none")) {
+        document.getElementById("loadingInfo").classList.add("d-none");
+        document.getElementById("timeoutInfo").classList.remove("d-none");
+        }
+        }, 15000);
         }
 
-        connection.start()
-            .then(async () => {
-                await connection.invoke("DolaczDoGrupyAdmin");
-                await pobierzDrzewo("");
-            })
-            .catch(e => {
-                pokazBlad("Błąd SignalR: " + e.message);
-            });
+        function wyczyscTimeout() {
+        if (timeoutTimer) {
+        clearTimeout(timeoutTimer);
+        timeoutTimer = null;
+        }
+        }
 
+        // ── Żądanie przez SignalR ────────────────────────────────────────────────
+        async function zadajDrzewo(sciezka) {
+        try {
+        await conn.invoke("ZadajDrzewo", KOMPUTER, sciezka ?? "");
+        } catch (e) {
+        wyczyscTimeout();
+        pokazBlad("Błąd żądania: " + e.message);
+        }
+        }
+
+        // ── Renderowanie drzewa folderów ─────────────────────────────────────────
+        function renderujFoldery(sciezka, podfoldery) {
+        document.getElementById("loadingInfo").classList.add("d-none");
+        document.getElementById("timeoutInfo").classList.add("d-none");
+        document.getElementById("offlineInfo").classList.add("d-none");
+        const root = document.getElementById("drzewo");
+        root.classList.remove("d-none");
+
+        const cel = (!sciezka || sciezka === "") ? root : otwarteDrzewa[sciezka];
+        if (!cel) return;
+        cel.innerHTML = "";
+
+        if (!podfoldery || podfoldery.length === 0) {
+        cel.innerHTML = '<li class="text-muted ps-2 small py-1">📭 Brak podfolderów</li>';
+        return;
+        }
+
+        podfoldery.forEach(folder => {
+        const nazwa = ostatniSegment(folder);
+        const li = document.createElement("li");
+        li.innerHTML = `
+        <div class="d-flex align-items-center gap-1 py-1 px-1 rounded item-row">
+        <button class="btn btn-link btn-sm p-0 text-decoration-none toggle-btn"
+        style="width:20px;color:#555;flex-shrink:0">▶</button>
+        <span style="flex:1;min-width:0">
+        📁 <strong>${esc(nazwa)}</strong>
+        <small class="text-muted d-block" style="font-size:0.72rem;word-break:break-all">${esc(folder)}</small>
+        </span>
+        <button class="btn btn-success btn-sm py-0 px-2 flex-shrink-0 dodaj-btn"
+        style="font-size:0.75rem">＋ Śledź</button>
+        </div>
+        <ul class="list-unstyled ps-3 subfoldery d-none"></ul>
+        `;
+
+        li.querySelector(".toggle-btn").addEventListener("click", async function () {
+        const sub = li.querySelector(".subfoldery");
+        if (sub.classList.contains("d-none")) {
+        sub.classList.remove("d-none");
+        this.textContent = "▼";
+        if (!otwarteDrzewa[folder]) {
+        otwarteDrzewa[folder] = sub;
+        sub.innerHTML = '<li class="text-muted small ps-2"><span class="spinner-border spinner-border-sm"></span> Ładowanie...</li>';
+        await zadajDrzewo(folder);
+        }
+        } else {
+        sub.classList.add("d-none");
+        this.textContent = "▶";
+        }
+        });
+
+        li.querySelector(".dodaj-btn").addEventListener("click", () => {
+        dodajFolder(folder);
+        });
+
+        cel.appendChild(li);
+        });
+        }
+
+        // ── Dodawanie folderu (AJAX – bez przeładowania strony) ──────────────────
+        async function dodajFolder(sciezka) {
+        if (!confirm("Śledzić folder:\n" + sciezka + "?")) return;
+        await wyslijDodajFolder(sciezka);
+        }
+
+        async function dodajFolderReczny() {
+        const input = document.getElementById("inputReczny");
+        const sciezka = input.value.trim();
+        if (!sciezka) {
+        alert("Wpisz ścieżkę folderu.");
+        return;
+        }
+        await wyslijDodajFolder(sciezka);
+        input.value = "";
+        }
+
+        async function wyslijDodajFolder(sciezka) {
+        const komunikat = document.getElementById("komunikatDodawania");
+        komunikat.className = "mt-2 alert alert-info";
+        komunikat.textContent = "⏳ Dodawanie...";
+
+        try {
+        const resp = await fetch("/Nadzor/DodajFolderKomputeraAjax", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ komputerId: KOMPUTER_ID, sciezka: sciezka })
+        });
+
+        const data = await resp.json();
+
+        if (resp.ok && data.sukces) {
+        komunikat.className = "mt-2 alert alert-success";
+        komunikat.textContent = "✅ Folder dodany: " + sciezka;
+        dodajFolderDoListy(data.folder);
+        } else if (data.istnial) {
+        komunikat.className = "mt-2 alert alert-warning";
+        komunikat.textContent = "⚠ Ten folder już jest śledzony.";
+        } else {
+        throw new Error(data.blad || "Nieznany błąd");
+        }
+        } catch (e) {
+        komunikat.className = "mt-2 alert alert-danger";
+        komunikat.textContent = "❌ Błąd: " + e.message;
+        }
+
+        setTimeout(() => komunikat.className = "mt-2 d-none", 4000);
+        }
+
+        function dodajFolderDoListy(folder) {
+        // Usuń komunikat "brak folderów" jeśli istnieje
+        const brak = document.getElementById("brakFolderow");
+        if (brak) brak.remove();
+
+        // Upewnij się że lista istnieje
+        let lista = document.querySelector("#listaFolderow .list-group");
+        if (!lista) {
+        lista = document.createElement("ul");
+        lista.className = "list-group list-group-flush";
+        document.getElementById("listaFolderow").appendChild(lista);
+        }
+
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-items-center py-2";
+        li.id = "folder-" + folder.id;
+        li.innerHTML = `
+        <div style="overflow:hidden">
+        <span>📁 <strong>${esc(folder.nazwaWyswietlana)}</strong></span><br />
+        <small class="text-muted"><code style="word-break:break-all">${esc(folder.sciezka)}</code></small>
+        </div>
+        <button class="btn btn-sm btn-outline-danger ms-2 flex-shrink-0"
+        onclick="usunFolder(${folder.id}, '${folder.sciezka.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')">🗑</button>
+        `;
+        lista.appendChild(li);
+
+        // Aktualizuj licznik
+        const liczba = document.querySelectorAll("#listaFolderow .list-group-item").length;
+        document.getElementById("liczbaFolderow").textContent = liczba;
+        }
+
+        // ── Usuwanie folderu (AJAX) ───────────────────────────────────────────────
+        async function usunFolder(id, sciezka) {
+        if (!confirm("Usunąć folder z listy śledzonych?\n" + sciezka)) return;
+
+        try {
+        const resp = await fetch("/Nadzor/UsunFolderKomputeraAjax", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: id })
+        });
+
+        if (resp.ok) {
+        const li = document.getElementById("folder-" + id);
+        if (li) li.remove();
+
+        const pozostale = document.querySelectorAll("#listaFolderow .list-group-item").length;
+        document.getElementById("liczbaFolderow").textContent = pozostale;
+
+        if (pozostale === 0) {
+        const lista = document.querySelector("#listaFolderow .list-group");
+        if (lista) lista.remove();
+        const body = document.getElementById("listaFolderow");
+        body.innerHTML = '<div class="text-center text-muted p-3" id="brakFolderow"><em>Brak śledzonych folderów.</em></div>';
+        }
+        }
+        } catch (e) {
+        alert("Błąd usuwania: " + e.message);
+        }
+        }
+
+        // ── Aktualizacja statusu UI gdy agent wraca/odchodzi ─────────────────────
+        function aktualizujStatusUI(online) {
+        const badge = document.getElementById("statusBadge");
+        const btnOdswiez = document.getElementById("btnOdswiez");
+        const infoSledzenie = document.getElementById("infoSledzenie");
+
+        if (online) {
+        badge.className = "badge bg-success";
+        badge.textContent = "● Online";
+        btnOdswiez.disabled = false;
+        infoSledzenie.textContent = "Agent zostanie natychmiast powiadomiony.";
+        document.getElementById("offlineInfo").classList.add("d-none");
+        } else {
+        badge.className = "badge bg-danger";
+        badge.textContent = "○ Offline";
+        btnOdswiez.disabled = true;
+        infoSledzenie.textContent = "⚠ Offline – folder zostanie aktywowany gdy agent wróci.";
+        document.getElementById("drzewo").classList.add("d-none");
+        document.getElementById("offlineInfo").classList.remove("d-none");
+        }
+        }
+
+        // ── Odświeżanie drzewa ────────────────────────────────────────────────────
+        function odswiez() {
+        const root = document.getElementById("drzewo");
+        root.classList.add("d-none");
+        root.innerHTML = "";
+        document.getElementById("loadingInfo").classList.remove("d-none");
+        document.getElementById("timeoutInfo").classList.add("d-none");
+        document.getElementById("errorInfo").classList.add("d-none");
+        Object.keys(otwarteDrzewa).forEach(k => delete otwarteDrzewa[k]);
+        ustawTimeout();
+        zadajDrzewo("");
+        }
+        window.odswiez = odswiez;
+
+        // ── Pomocnicze ────────────────────────────────────────────────────────────
+        function ostatniSegment(s) {
+        s = s.replace(/[/\\]+$/, "");
+        const parts = s.split(/[/\\]/);
+        return parts[parts.length - 1] || s;
+        }
+
+        function esc(t) {
+        return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+        }
+
+        function pokazBlad(msg) {
+        const el = document.getElementById("errorInfo");
+        el.textContent = "❌ " + msg;
+        el.classList.remove("d-none");
+        document.getElementById("loadingInfo").classList.add("d-none");
+        wyczyscTimeout();
         }
     </script>
+    <style>
+        .item-row:hover {
+        background: #f0f4f8;
+        }
+    </style>
 }

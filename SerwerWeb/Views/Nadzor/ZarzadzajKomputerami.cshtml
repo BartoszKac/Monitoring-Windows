@@ -16,7 +16,7 @@
     </div>
 
     <div class="row mb-4">
-        {{!-- FORMULARZ DODAWANIA KOMPUTERA --}}
+        @* FORMULARZ DODAWANIA KOMPUTERA *@
         <div class="col-md-4">
             <div class="card shadow-sm border-primary">
                 <div class="card-header bg-primary text-white">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        {{!-- LISTA KOMPUTERÓW --}}
+        @* LISTA KOMPUTERÓW *@
         <div class="col-md-8">
             @if (!Model.Any())
             {
@@ -66,7 +66,7 @@
                             </form>
                         </div>
                         <div class="card-body">
-                            {{!-- Dodaj folder do komputera --}}
+                            @* Dodaj folder do komputera *@
                             <form asp-action="DodajFolderKomputera" method="post" class="row g-2 mb-3">
                                 <input type="hidden" name="komputerId" value="@k.Id" />
                                 <div class="col">
@@ -78,7 +78,7 @@
                                 </div>
                             </form>
 
-                            {{!-- Lista folderów --}}
+                            @* Lista folderów *@
                             @if (k.Foldery.Any())
                             {
                                 <div class="list-group list-group-flush">

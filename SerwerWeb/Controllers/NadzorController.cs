@@ -64,16 +64,12 @@ public class NadzorController : Controller
 
         if (!string.IsNullOrEmpty(szukaj))
             query = query.Where(z => z.NazwaStudenta.Contains(szukaj) || z.NazwaPliku.Contains(szukaj));
-
         if (!string.IsNullOrEmpty(student))
             query = query.Where(z => z.NazwaStudenta == student);
-
         if (!string.IsNullOrEmpty(komputer))
             query = query.Where(z => z.NazwaKomputera == komputer);
-
         if (status == "kopia") query = query.Where(z => z.CzyToKopia == true);
         else if (status == "ok") query = query.Where(z => z.CzyToKopia == false);
-
         if (dataOd.HasValue)
             query = query.Where(z => z.DataLogowania >= dataOd.Value);
         if (dataDo.HasValue)
@@ -144,7 +140,7 @@ public class NadzorController : Controller
         return Ok(new { status = "Sukces", alert = nowe.CzyToKopia });
     }
 
-    // ─── API: KONFIGURACJA DLA AGENTA ────────────────────────────────────────
+    // ─── API: KONFIGURACJA DLA AGENTA ─────────────────────────────────────────
 
     [HttpGet]
     [Route("api/nadzor/konfiguracja")]
@@ -167,31 +163,104 @@ public class NadzorController : Controller
             sciezki = await _context.FolderyMonitorowane.Select(f => f.Sciezka).ToListAsync();
         }
 
-        // Zwracamy pustą listę zamiast 404 – agent sam obsłuży brak folderów
         return Ok(sciezki);
     }
 
     // ─── API: ŻĄDANIE DRZEWA FOLDERÓW OD AGENTA ──────────────────────────────
+    // ─── AJAX: Dodaj folder (bez przeładowania strony) ────────────────────────
+    [HttpPost]
+    public async Task<IActionResult> DodajFolderKomputeraAjax([FromBody] DodajFolderDto dto)
+    {
+        if (string.IsNullOrWhiteSpace(dto.Sciezka))
+            return BadRequest(new { blad = "Ścieżka nie może być pusta." });
+
+        var komputer = await _context.Komputery
+            .Include(k => k.Foldery)
+            .FirstOrDefaultAsync(k => k.Id == dto.KomputerId);
+
+        if (komputer == null)
+            return NotFound(new { blad = "Komputer nie znaleziony." });
+
+        bool istnieje = komputer.Foldery.Any(f => f.Sciezka == dto.Sciezka.Trim());
+        if (istnieje)
+            return Ok(new { sukces = false, istnial = true });
+
+        var nowyFolder = new FolderKomputera
+        {
+            KomputerId = dto.KomputerId,
+            Sciezka = dto.Sciezka.Trim(),
+            NazwaWyswietlana = Path.GetFileName(dto.Sciezka.TrimEnd('\\', '/')) ?? dto.Sciezka,
+            DataDodania = DateTime.Now
+        };
+        _context.FolderyKomputerow.Add(nowyFolder);
+        await _context.SaveChangesAsync();
+
+        // Wyślij nową listę do agenta przez SignalR
+        var wszystkieSciezki = await _context.FolderyKomputerow
+            .Where(f => f.KomputerId == dto.KomputerId)
+            .Select(f => f.Sciezka)
+            .ToListAsync();
+
+        await _hubContext.Clients.Group(komputer.NazwaKomputera)
+            .SendAsync("UstawSledzenie", wszystkieSciezki);
+
+        return Ok(new
+        {
+            sukces = true,
+            folder = new
+            {
+                id = nowyFolder.Id,
+                sciezka = nowyFolder.Sciezka,
+                nazwaWyswietlana = nowyFolder.NazwaWyswietlana
+            }
+        });
+    }
+
+    // ─── AJAX: Usuń folder (bez przeładowania strony) ─────────────────────────
+    [HttpPost]
+    public async Task<IActionResult> UsunFolderKomputeraAjax([FromBody] UsunFolderDto dto)
+    {
+        var folder = await _context.FolderyKomputerow
+            .Include(f => f.Komputer)
+            .FirstOrDefaultAsync(f => f.Id == dto.Id);
+
+        if (folder == null)
+            return NotFound(new { blad = "Folder nie znaleziony." });
+
+        var komputer = folder.Komputer;
+        _context.FolderyKomputerow.Remove(folder);
+        await _context.SaveChangesAsync();
+
+        // Wyślij zaktualizowaną listę do agenta
+        var pozostaleSciezki = await _context.FolderyKomputerow
+            .Where(f => f.KomputerId == komputer.Id)
+            .Select(f => f.Sciezka)
+            .ToListAsync();
+
+        await _hubContext.Clients.Group(komputer.NazwaKomputera)
+            .SendAsync("UstawSledzenie", pozostaleSciezki);
+
+        return Ok(new { sukces = true });
+    }
 
     [HttpPost]
     [Route("api/nadzor/zadaj-drzewo")]
     public async Task<IActionResult> ZadajDrzewo([FromBody] ZadanieDrzewaDto dto)
     {
-        // Szukamy komputera w bazie, żeby sprawdzić czy jest Online
         var komp = await _context.Komputery
             .FirstOrDefaultAsync(k => k.NazwaKomputera == dto.nazwaKomputera);
 
         if (komp == null || !komp.Online)
             return BadRequest("Komputer offline lub nie znaleziony.");
 
-        // Wysyłamy do GRUPY o nazwie takiej jak nazwa komputera
-        // Agent w NadzorHub.cs dodaje się do grupy o swojej nazwie przy rejestracji
+        // POPRAWKA: używamy grupy (nazwaKomputera) zamiast ConnectionId
+        // Dzięki temu działa nawet po reconnect agenta
         await _hubContext.Clients.Group(dto.nazwaKomputera)
             .SendAsync("PobierzDrzewo", dto.sciezka ?? "");
 
         return Ok();
-
     }
+
     // ─── ZARZĄDZANIE KOMPUTERAMI ──────────────────────────────────────────────
 
     public async Task<IActionResult> ZarzadzajKomputerami()
@@ -204,9 +273,6 @@ public class NadzorController : Controller
         return View(komputery);
     }
 
-    /// <summary>
-    /// Strona do przeglądania folderów zdalnego komputera i zarządzania śledzeniem.
-    /// </summary>
     public async Task<IActionResult> KomputerFoldery(int id)
     {
         var komp = await _context.Komputery
@@ -214,7 +280,6 @@ public class NadzorController : Controller
             .FirstOrDefaultAsync(k => k.Id == id);
 
         if (komp == null) return NotFound();
-
         return View(komp);
     }
 
@@ -239,26 +304,37 @@ public class NadzorController : Controller
     public async Task<IActionResult> DodajFolderKomputera(int komputerId, string sciezka)
     {
         if (string.IsNullOrWhiteSpace(sciezka))
-            return RedirectToAction("ZarzadzajKomputerami");
+            return RedirectToAction("KomputerFoldery", new { id = komputerId });
 
-        bool istnieje = await _context.FolderyKomputerow
-            .AnyAsync(f => f.KomputerId == komputerId && f.Sciezka == sciezka);
+        var komputer = await _context.Komputery
+            .Include(k => k.Foldery)
+            .FirstOrDefaultAsync(k => k.Id == komputerId);
+
+        if (komputer == null) return NotFound();
+
+        bool istnieje = komputer.Foldery.Any(f => f.Sciezka == sciezka.Trim());
 
         if (!istnieje)
         {
-            _context.FolderyKomputerow.Add(new FolderKomputera
+            var nowyFolder = new FolderKomputera
             {
                 KomputerId = komputerId,
                 Sciezka = sciezka.Trim(),
                 NazwaWyswietlana = Path.GetFileName(sciezka.TrimEnd('\\', '/')) ?? sciezka,
                 DataDodania = DateTime.Now
-            });
+            };
+            _context.FolderyKomputerow.Add(nowyFolder);
             await _context.SaveChangesAsync();
 
-            var komputer = await _context.Komputery.FindAsync(komputerId);
-            if (komputer != null && !string.IsNullOrEmpty(komputer.ConnectionId))
-                await _hubContext.Clients.Client(komputer.ConnectionId)
-                    .SendAsync("NowyFolder", sciezka);
+            // --- KLUCZOWA ZMIANA: Wysyłamy nową, PEŁNĄ listę folderów do Agenta ---
+            var wszystkieSciezki = await _context.FolderyKomputerow
+                .Where(f => f.KomputerId == komputerId)
+                .Select(f => f.Sciezka)
+                .ToListAsync();
+
+            // Używamy metody "UstawSledzenie", którą Twój Hub już obsługuje
+            await _hubContext.Clients.Group(komputer.NazwaKomputera)
+                .SendAsync("UstawSledzenie", wszystkieSciezki);
         }
 
         return RedirectToAction("KomputerFoldery", new { id = komputerId });
@@ -273,17 +349,21 @@ public class NadzorController : Controller
 
         if (folder != null)
         {
-            int komputerId = folder.KomputerId;
-            string sciezka = folder.Sciezka;
-            string? connId = folder.Komputer?.ConnectionId;
-
+            var komputer = folder.Komputer;
             _context.FolderyKomputerow.Remove(folder);
             await _context.SaveChangesAsync();
 
-            if (!string.IsNullOrEmpty(connId))
-                await _hubContext.Clients.Client(connId).SendAsync("UsunFolder", sciezka);
+            // Pobieramy nową listę po usunięciu
+            var pozostaleSciezki = await _context.FolderyKomputerow
+                .Where(f => f.KomputerId == komputer.Id)
+                .Select(f => f.Sciezka)
+                .ToListAsync();
 
-            return RedirectToAction("KomputerFoldery", new { id = komputerId });
+            // Wysyłamy aktualizację do Agenta
+            await _hubContext.Clients.Group(komputer.NazwaKomputera)
+                .SendAsync("UstawSledzenie", pozostaleSciezki);
+
+            return RedirectToAction("KomputerFoldery", new { id = komputer.Id });
         }
 
         return RedirectToAction("ZarzadzajKomputerami");
@@ -418,11 +498,27 @@ public class NadzorController : Controller
 
         return View(historia);
     }
+    public class HeartbeatDto
+    {
+        public string NazwaKomputera { get; set; } = "";
+        public string? NazwaStudenta { get; set; }
+        public DateTime Czas { get; set; }
+    }
 }
 
 // ─── DTO ──────────────────────────────────────────────────────────────────────
 public class ZadanieDrzewaDto
 {
-    public string nazwaKomputera { get; set; } = ""; // Zmienione na małą literę (zgodnie z JS)
-    public string? sciezka { get; set; }           // Zmienione na małą literę
+    public string nazwaKomputera { get; set; } = "";
+    public string? sciezka { get; set; }
+}
+public class DodajFolderDto
+{
+    public int KomputerId { get; set; }
+    public string Sciezka { get; set; } = "";
+}
+
+public class UsunFolderDto
+{
+    public int Id { get; set; }
 }

@@ -441,7 +441,6 @@ C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.csproj.Up2Date
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.dll
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\refint\SerwerWeb.dll
@@ -452,3 +451,4 @@ C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\SerwerWeb.source
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\Microsoft.Extensions.Hosting.WindowsServices.dll
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\System.ServiceProcess.ServiceController.dll
 C:\Users\User\source\SR\Nowy folder\SerwerWeb\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.ServiceProcess.ServiceController.dll
+C:\Users\User\source\SR\Nowy folder\SerwerWeb\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
